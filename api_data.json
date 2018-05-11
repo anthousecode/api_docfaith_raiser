@@ -1,7 +1,7 @@
 [
   {
     "type": "get",
-    "url": "/admin/saerch/demand_type/create",
+    "url": "/api/admin/saerch/demand_type/create",
     "title": "Create new demand type",
     "name": "Create_Demand_Type",
     "group": "Admin_Demand_Type",
@@ -111,7 +111,7 @@
   },
   {
     "type": "delete",
-    "url": "/admin/saerch/demand_type/:id",
+    "url": "/api/admin/saerch/demand_type/:id",
     "title": "Delete demand type from id",
     "name": "Delete_Demand_Types",
     "group": "Admin_Demand_Type",
@@ -190,7 +190,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/demand_type/:id",
+    "url": "/api/admin/saerch/demand_type/:id",
     "title": "Get demand type from id",
     "name": "Get_Demand_Type",
     "group": "Admin_Demand_Type",
@@ -286,7 +286,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/demand_type",
+    "url": "/api/admin/saerch/demand_type",
     "title": "Get all demand types",
     "name": "Get_Demand_Types",
     "group": "Admin_Demand_Type",
@@ -364,7 +364,7 @@
   },
   {
     "type": "put/patch",
-    "url": "/admin/saerch/demand_type/:id",
+    "url": "/api/admin/saerch/demand_type/:id",
     "title": "Update demand type from id",
     "name": "Update_Demand_Types",
     "group": "Admin_Demand_Type",
@@ -487,7 +487,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/purpose/create",
+    "url": "/api/admin/saerch/purpose/create",
     "title": "Create new purpose",
     "name": "Create_Purpose",
     "group": "Admin_Purpose",
@@ -597,7 +597,7 @@
   },
   {
     "type": "delete",
-    "url": "/admin/saerch/purpose/:id",
+    "url": "/api/admin/saerch/purpose/:id",
     "title": "Delete purpose from id",
     "name": "Delete_Purposes",
     "group": "Admin_Purpose",
@@ -676,7 +676,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/purpose/:id",
+    "url": "/api/admin/saerch/purpose/:id",
     "title": "Get purpose from id",
     "name": "Get_Purpose",
     "group": "Admin_Purpose",
@@ -772,7 +772,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/purpose",
+    "url": "/api/admin/saerch/purpose",
     "title": "Get all purposes",
     "name": "Get_Purposes",
     "group": "Admin_Purpose",
@@ -850,7 +850,7 @@
   },
   {
     "type": "put/patch",
-    "url": "/admin/saerch/purpose/:id",
+    "url": "/api/admin/saerch/purpose/:id",
     "title": "Update purpose from id",
     "name": "Update_Purposes",
     "group": "Admin_Purpose",
@@ -973,7 +973,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/religion/create",
+    "url": "/api/admin/saerch/religion/create",
     "title": "Create new religion",
     "name": "Create_Religion",
     "group": "Admin_Religion",
@@ -1083,7 +1083,7 @@
   },
   {
     "type": "delete",
-    "url": "/admin/saerch/religion/:id",
+    "url": "/api/admin/saerch/religion/:id",
     "title": "Delete religion from id",
     "name": "Delete_Religions",
     "group": "Admin_Religion",
@@ -1162,7 +1162,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/religion/:id",
+    "url": "/api/admin/saerch/religion/:id",
     "title": "Get religion from id",
     "name": "Get_Religion",
     "group": "Admin_Religion",
@@ -1258,7 +1258,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/religion",
+    "url": "/api/admin/saerch/religion",
     "title": "Get all religions",
     "name": "Get_Religions",
     "group": "Admin_Religion",
@@ -1336,7 +1336,7 @@
   },
   {
     "type": "put/patch",
-    "url": "/admin/saerch/religion/:id",
+    "url": "/api/admin/saerch/religion/:id",
     "title": "Update religion from id",
     "name": "Update_Religions",
     "group": "Admin_Religion",
@@ -1459,7 +1459,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/type_destination/create",
+    "url": "/api/admin/saerch/type_destination/create",
     "title": "Create new Type Destination",
     "name": "Create_Type_Destination",
     "group": "Admin_Type_Destination",
@@ -1569,7 +1569,7 @@
   },
   {
     "type": "delete",
-    "url": "/admin/saerch/type_destination/:id",
+    "url": "/api/admin/saerch/type_destination/:id",
     "title": "Delete Type Destination from id",
     "name": "Delete_Type_Destinations",
     "group": "Admin_Type_Destination",
@@ -1648,7 +1648,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/type_destination/:id",
+    "url": "/api/admin/saerch/type_destination/:id",
     "title": "Get Type Destination from id",
     "name": "Get_Type_Destination",
     "group": "Admin_Type_Destination",
@@ -1744,7 +1744,7 @@
   },
   {
     "type": "get",
-    "url": "/admin/saerch/type_destination",
+    "url": "/api/admin/saerch/type_destination",
     "title": "Get all Type Destinations",
     "name": "Get_Type_Destinations",
     "group": "Admin_Type_Destination",
@@ -1822,7 +1822,7 @@
   },
   {
     "type": "put/patch",
-    "url": "/admin/saerch/type_destination/:id",
+    "url": "/api/admin/saerch/type_destination/:id",
     "title": "Update Type Destination from id",
     "name": "Update_Type_Destinations",
     "group": "Admin_Type_Destination",
@@ -1942,5 +1942,35 @@
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/Admin/TypeDestinationsController.php",
     "groupTitle": "Admin_Type_Destination"
+  },
+  {
+    "type": "get",
+    "url": "/api/tocken",
+    "title": "X-CSRF-TOKEN",
+    "name": "X_CSRF_TOKEN",
+    "group": "Base",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN value.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./routes/web.php",
+    "groupTitle": "Base"
   }
 ]
