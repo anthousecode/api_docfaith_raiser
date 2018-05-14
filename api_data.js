@@ -1972,5 +1972,975 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./routes/web.php",
     "groupTitle": "Base"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/countries",
+    "title": "Get all countries",
+    "name": "All_Countries",
+    "group": "GeoData",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>Country id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.sortname",
+            "description": "<p>Country sortname.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>Country name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":1,\n         \"sortname\":\"AF\",\n         \"name\":\"Afghanistan\",\n     },\n     {\n         \"id\":2,\n         \"sortname\":\"AL\",\n         \"name\":\"Albania\",\n     },\n     ....\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/cities/autoload/:state_id",
+    "title": "Get sities for autoloading",
+    "name": "Cities_autoloading",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":state_id",
+            "description": "<p>State id for search.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Part of the name of city for autoloading.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>City id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>City name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.state_id",
+            "description": "<p>State id of city.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>If data is absent</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":13,\n         \"name\":\"Haryana\",\n         \"state_id\": 101\n     },\n     ......\n ]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/cities/:state_id",
+    "title": "Get all cities of state",
+    "name": "Cities_of_states",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":state_id",
+            "description": "<p>State id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>City id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>City name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.state_id",
+            "description": "<p>State id of city.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":5994,\n         \"name\":\"Charikar\",\n         \"state_id\":65,\n     },\n     {\n         \"id\":5995,\n         \"name\":\"Jabal-os-Saraj\",\n         \"state_id\":65,\n     },\n     ....\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/city/:id",
+    "title": "Get city data from id",
+    "name": "City_data",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>City ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>City id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>City name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "state_id",
+            "description": "<p>State id of city.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     \"id\":5994,\n     \"name\":\"Charikar\",\n     \"state_id\":65,\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/city_detail/:id",
+    "title": "Get detail information of city from id",
+    "name": "City_detail",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":state_id",
+            "description": "<p>City id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": "<p>City data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>City id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.name",
+            "description": "<p>City name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.state_id",
+            "description": "<p>State id of city.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.state",
+            "description": "<p>Data of cities state.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.state.id",
+            "description": "<p>States Id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.state.name",
+            "description": "<p>States name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.state.country_id",
+            "description": "<p>States country id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.state.country",
+            "description": "<p>Data of states country.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.state.country.id",
+            "description": "<p>Countries Id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.state.country.sortname",
+            "description": "<p>Countries sortname.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.state.country.name",
+            "description": "<p>Country name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n     \"id\":5,\n     \"name\":\"Addanki\",\n     \"state_id\":2,\n     \"state\":\n         {\n             \"id\":2,\n             \"name\":\"Andhra Pradesh\",\n             \"country_id\":101,\n             \"country\":\n                 {\n                     \"id\":101,\n                     \"sortname\":\"IN\",\n                     \"name\":\"India\",\n                 }\n          }\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/countries/autoload",
+    "title": "Get countries for autoloading",
+    "name": "Countries_autoloading",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Part of the name of country for autoloading.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"title\": \"ukr\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>Country id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.sortname",
+            "description": "<p>Country sortname.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>Country name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>If data is absent</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":228,\n         \"sortname\":\"UA\",\n         \"name\":\"Ukraine\",\n     },\n     ......\n ]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
+    "name": "Country_data",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Country id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "sortname",
+            "description": "<p>Country sortname.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Country name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n   \"id\":1,\n   \"sortname\":\"AF\",\n   \"name\":\"Afghanistan\",\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
+    "name": "Country_data",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Country id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "sortname",
+            "description": "<p>Country sortname.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Country name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n   \"id\":1,\n   \"sortname\":\"AF\",\n   \"name\":\"Afghanistan\",\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/state/:id",
+    "title": "Get state data from id",
+    "name": "State_data",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>State ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>State id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>State name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "country_id",
+            "description": "<p>Country id of state.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     \"id\":176,\n     \"name\":\"Benguela\",\n     \"country_id\":6,\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/states/autoload/:country_id",
+    "title": "Get states for autoloading",
+    "name": "States_autoloading",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":country_id",
+            "description": "<p>Country id for search.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Part of the name of state for autoloading.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>State id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>State name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.country_id",
+            "description": "<p>State id of city.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>If data is absent</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":13,\n         \"name\":\"Haryana\",\n         \"country_id\": 101\n     },\n     ......\n ]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
+  },
+  {
+    "type": "get",
+    "url": "/api/geo/states/:country_id",
+    "title": "Get all states of country",
+    "name": "States_of_country",
+    "group": "GeoData",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":country_id",
+            "description": "<p>Country id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>State id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.name",
+            "description": "<p>State name.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.country_id",
+            "description": "<p>Country id of state.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":175,\n         \"name\":\"Bengo\",\n         \"country_id\":6,\n     },\n     {\n         \"id\":176,\n         \"name\":\"Benguela\",\n         \"country_id\":6,\n     },\n     ....\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not_found",
+            "description": "<p>Not found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/GeodataController.php",
+    "groupTitle": "GeoData"
   }
 ] });
