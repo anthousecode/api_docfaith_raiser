@@ -1975,6 +1975,183 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/api/base/cities/search_parameters",
+    "title": "Get all selected parameters for search and create event",
+    "name": "Search_Parameters",
+    "group": "Base_Data",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.DemandType",
+            "description": "<p>Demand Type parameters (&quot;Need&quot; from specification)</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.DemandType.array",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.DemandType.array.id",
+            "description": "<p>Demand Type id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.DemandType.array.title",
+            "description": "<p>Demand Type title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.TypeDestination",
+            "description": "<p>Type Destination parameters (&quot;Type&quot; from specification)</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.TypeDestination.array",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.TypeDestination.array.id",
+            "description": "<p>Type Destination id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.TypeDestination.array.title",
+            "description": "<p>Type Destination title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.Purpose",
+            "description": "<p>Purpose parameters</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.Purpose.array",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.Purpose.array.id",
+            "description": "<p>Purpose id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.Purpose.array.title",
+            "description": "<p>Purpose title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.Religion",
+            "description": "<p>Religion parameters</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.Religion.array",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.Religion.array.id",
+            "description": "<p>Religion id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.Religion.array.title",
+            "description": "<p>Religion title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.PaymentFrequency",
+            "description": "<p>Payment Frequency parameters</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.PaymentFrequency.array",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.PaymentFrequency.array.id",
+            "description": "<p>Payment Frequency id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.PaymentFrequency.array.title",
+            "description": "<p>Payment Frequency title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.PaymentFrequency.array.name",
+            "description": "<p>Payment Frequency name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n     \"DemandType\":\n         [\n             {\n                 \"id\":7,\n                 \"title\":\"Money\",\n             },\n             {\n                 \"id\":8,\n                 \"title\":\"Volunteers\",\n             },\n             ..........\n         ],\n     \"TypeDestination\":\n         [\n             {\n                 \"id\":5,\n                 \"title\":\"Church\",\n             },\n             {\n                 \"id\":6,\n                 \"title\":\"Charity\",\n             },\n             .........\n         ],\n     \"Purpose\":\n         [\n             {\n                 \"id\":1,\n                 \"title\":\"Disaster Relief\",\n             },\n             {\n                 \"id\":2,\n                 \"title\":\"Children & Education\",\n             },\n             ......\n         ],\n     \"Religion\":\n         [\n             {\n                 \"id\":11,\n                 \"title\":\"Christianity\",\n             },\n             {\n                 \"id\":12,\n                 \"title\":\"Judiasm\",\n             },\n             .........\n         ],\n     \"PaymentFrequency\":\n         [\n              {\n                 \"id\":1,\n                 \"title\":\"Per\\/Week\",\n                 \"name\":\"per_week\",\n             },\n             {\n                 \"id\":2,\n                 \"title\":\"Per\\/Month\",\n                 \"name\":\"per_month\",\n             },\n             ..........\n         ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/BaseDataController.php",
+    "groupTitle": "Base_Data"
+  },
+  {
+    "type": "get",
     "url": "/api/geo/countries",
     "title": "Get all countries",
     "name": "All_Countries",
@@ -2537,8 +2714,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -2548,8 +2725,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
@@ -2613,8 +2790,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -2624,8 +2801,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
