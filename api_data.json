@@ -2181,6 +2181,784 @@
     "groupTitle": "Base"
   },
   {
+    "type": "put",
+    "url": "/api/event/create",
+    "title": "Create new Event",
+    "name": "Create_Event",
+    "group": "Event",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "type_destination",
+            "description": "<p>Id of type destination (&quot;Type&quot; from specification). Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "purpose",
+            "description": "<p>Id of purpose. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "religion",
+            "description": "<p>Id of religion. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "country",
+            "description": "<p>Id of country. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "state",
+            "description": "<p>Id of state. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "city",
+            "description": "<p>Id of city. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>Contact address for even. Required, min length 3, max length 255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Title of even. Required, min length 3, max length 255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "short_story",
+            "description": "<p>Short description of event. Required, min length 3, max length 255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "story",
+            "description": "<p>Description of event. Required, min length 10.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"type_destination\": 1\n  \"purpose\": 2\n  \"religion\": 0\n  \"country\": 2\n  \"state\": 0\n  \"city\": 1\n  \"title\": 'somme title'\n  \"address\": 'somme address'\n  \"short_story\": 'some text'\n  \"story\": 'some text'\n  \"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "story",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "short_story",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "type_destination_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "purpose_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "religion_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "country_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "state_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "city_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "updated_at",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "created_at",
+            "description": "<p>Payment Frequency name.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Payment Frequency name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n {\n     \"title\":\"testing\",\n     \"story\":\"testing story\",\n     \"short_story\":\"short_story\",\n     \"address\":\"lalalala\",\n     \"type_destination_id\":\"1\",\n     \"purpose_id\":\"1\",\n     \"religion_id\":\"1\",\n     \"country_id\":\"1\",\n     \"state_id\":\"1\",\n     \"city_id\":\"1\",\n     \"user_id\":1,\n     \"updated_at\":\"2018-05-15 11:41:00\",\n     \"created_at\":\"2018-05-15 11:41:00\",\n     \"id\":1\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"city\":\n         [\n             \"The city field is required.\",\n             ......\n         ],\n     \"short_story\":\n         [\n             \"The short story field is required.\",\n             .....\n         ],\n     .....\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventController.php",
+    "groupTitle": "Event"
+  },
+  {
+    "type": "post",
+    "url": "/api/event/:event_id/media/create",
+    "title": "Create video and image to event",
+    "name": "Create_media",
+    "group": "Event",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "_token",
+            "description": "<p>X-CSRF-TOKEN</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "videos",
+            "description": "<p>Array of array video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "videos.array",
+            "description": "<p>Array of video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "videos.array.url",
+            "description": "<p>URL of video</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "videos.array.title",
+            "description": "<p>Title of video</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images",
+            "description": "<p>Array of array video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images.array",
+            "description": "<p>Array of video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "optional": false,
+            "field": "images.array.file",
+            "description": "<p>URL of video</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "images.array.title",
+            "description": "<p>Title of video</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"videos\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         ........\n     ]\n   \"images\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'file content'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'ile content'\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of saving (true - ok).</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"videos\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/MediaController.php",
+    "groupTitle": "Event"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/chat/create",
+    "title": "Create new message to event chat",
+    "name": "Create_messate",
+    "group": "Event",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message content</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "array[]",
+            "optional": false,
+            "field": "messages",
+            "description": "<p>Array of all message in chat.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Object[]",
+            "optional": false,
+            "field": "messages.message",
+            "description": "<p>Message data</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.event_id",
+            "description": "<p>Chat from event of id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "messages.message.user_id",
+            "description": "<p>User id for messaging</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "messages.message.admin_send",
+            "description": "<p>Message is from admin</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.content",
+            "description": "<p>Messages content</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "messages.message.is_read",
+            "description": "<p>Messages status of reading</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "messages.message.created_at",
+            "description": "<p>Message updated date</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "messages.message.updated_at",
+            "description": "<p>Message created date</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n [\n     {\n         \"id\":1,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":0,         //This message send user\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:06:52\",\n         \"updated_at\":\"2018-05-15 13:06:52\"\n     },\n     {\n         \"id\":2,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":1,         //This message send admin\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:07:14\",\n         \"updated_at\":\"2018-05-15 13:07:14\"\n     }\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"message\":\n         [\n             \"The message field is required.\"\n         ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:id/submit",
+    "title": "Submit Event to approve admin",
+    "name": "Submit_Event",
+    "group": "Event",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Id of event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Event title</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "story",
+            "description": "<p>Event story</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "short_story",
+            "description": "<p>Event short story</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>Event address</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "type_destination_id",
+            "description": "<p>Event type description id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "purpose_id",
+            "description": "<p>Event purpose id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "religion_id",
+            "description": "<p>Event religion id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "country_id",
+            "description": "<p>Event country id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "state_id",
+            "description": "<p>Event state id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "city_id",
+            "description": "<p>Event city id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Event user id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "status_id",
+            "description": "<p>Event status id</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "is_approved",
+            "description": "<p>Event status approve</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "is_submit",
+            "description": "<p>Event status submit</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "updated_at",
+            "description": "<p>Event updated date</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "created_at",
+            "description": "<p>Event created date</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n {\n     \"id\":1,\n     \"title\":\"testing\",\n     \"story\":\"testing story\",\n     \"short_story\":\"short_story\",\n     \"address\":\"lalalala\",\n     \"type_destination_id\":5,\n     \"purpose_id\":10,\n     \"religion_id\":6,\n     \"country_id\":1,\n     \"state_id\":1,\n     \"city_id\":1,\n     \"user_id\":1,\n     \"status_id\":0,\n     \"is_approved\":0,\n     \"is_submit\":true,\n     \"created_at\":\"2018-05-15 12:26:13\",\n     \"updated_at\":\"2018-05-15 12:30:12\"\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventController.php",
+    "groupTitle": "Event"
+  },
+  {
     "type": "get",
     "url": "/api/geo/countries",
     "title": "Get all countries",
