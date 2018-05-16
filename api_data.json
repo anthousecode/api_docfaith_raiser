@@ -2403,7 +2403,7 @@
     "type": "put",
     "url": "/api/event/:event_id/demand/create",
     "title": "Create video and image to event",
-    "name": "Create_media",
+    "name": "Create_demand",
     "group": "Event",
     "parameter": {
       "fields": {
