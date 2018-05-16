@@ -2151,36 +2151,6 @@ define({ "api": [
     "groupTitle": "Base"
   },
   {
-    "type": "get",
-    "url": "/api/tocken",
-    "title": "X-CSRF-TOKEN",
-    "name": "X_CSRF_TOKEN",
-    "group": "Base",
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN value.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "\"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./routes/web.php",
-    "groupTitle": "Base"
-  },
-  {
     "type": "put",
     "url": "/api/event/create",
     "title": "Create new Event",
@@ -2430,6 +2400,198 @@ define({ "api": [
     "groupTitle": "Event"
   },
   {
+    "type": "put",
+    "url": "/api/event/:event_id/demand/create",
+    "title": "Create video and image to event",
+    "name": "Create_media",
+    "group": "Event",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "money",
+            "description": "<p>Array of array money data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "money.array",
+            "description": "<p>Array of money data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "money.array.summ",
+            "description": "<p>Sum of needed many. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "money.array.payment_frequency",
+            "description": "<p>Id of payment frequency. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "money.array.account",
+            "description": "<p>PayPal account. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "volunteers",
+            "description": "<p>Array of array volunteers data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "volunteers.array",
+            "description": "<p>Array of volunteer data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "volunteers.array.name",
+            "description": "<p>Name of volunteer. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "volunteers.array.count",
+            "description": "<p>Count of volunteer. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "supplies",
+            "description": "<p>Array of array supplies data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "supplies.array",
+            "description": "<p>Array of supply data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "supplies.array.name",
+            "description": "<p>Name of supply. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "supplies.array.count",
+            "description": "<p>Count of supply. Required</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"money\":\n     [\n         1 :\n             [\n                 'summ' : 10000,\n                 'payment_frequency' : 2\n                 'account' : '12345678932174'\n             ]\n     ],\n   \"volunteers\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15\n             ]\n         ........\n     ],\n   \"supplies\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of saving (true - ok).</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"supplies\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventController.php",
+    "groupTitle": "Event"
+  },
+  {
     "type": "post",
     "url": "/api/event/:event_id/media/create",
     "title": "Create video and image to event",
@@ -2513,7 +2675,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n  \"videos\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         ........\n     ]\n   \"images\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'file content'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'ile content'\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "content": "{\n  \"videos\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'url' : 'Same URL'\n             ]\n         ........\n     ]\n   \"images\":\n     [\n         1 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'file content'\n             ]\n         2 :\n             [\n                 'title' : 'Same title',\n                 'file' : 'file content'\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
           "type": "json"
         }
       ]
