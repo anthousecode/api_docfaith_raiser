@@ -665,7 +665,7 @@
       "examples": [
         {
           "title": "205 Reset Content:",
-          "content": "{\n     \"status\":1\n}",
+          "content": " HTTP/1.1 205\n{\n     \"status\":1\n}",
           "type": "json"
         }
       ]
@@ -702,16 +702,16 @@
     },
     "success": {
       "fields": {
-        "Success 200": [
+        "200": [
           {
-            "group": "Success 200",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "id",
             "description": "<p>Purpose id.</p>"
           },
           {
-            "group": "Success 200",
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "title",
@@ -722,7 +722,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n     \"id\":1,\n     \"title\":\"Name\"\n}",
+          "content": "  HTTP/1.1 200 OK\n{\n     \"id\":1,\n     \"title\":\"Name\"\n}",
           "type": "json"
         }
       ]
@@ -882,8 +882,8 @@
       },
       "examples": [
         {
-          "title": "Request-Example:",
-          "content": "{\n  \"title\": 'new name'\n}",
+          "title": "(200) {json} Request-Example:",
+          "content": " HTTP/1.1 200 OK\n{\n  \"title\": 'new name'\n}",
           "type": "json"
         }
       ]
@@ -910,7 +910,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n     \"id\":1,\n     \"title\":\"Name\"\n}",
+          "content": "HTTP/1.1 201\n   {\n         \"id\":1,\n         \"title\":\"Name\"\n    }",
           "type": "json"
         }
       ]
@@ -6090,6 +6090,289 @@
     "groupTitle": "Event_Comment"
   },
   {
+    "type": "delete",
+    "url": "/api/like/:like_id/remove",
+    "title": "Dislike comment",
+    "name": "Dislike",
+    "group": "Event_Comment",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":like_id",
+            "description": "<p>Id of like</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of remove like.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 201 OK\n[\n   'status':true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n         Like Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentLikeController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "post",
+    "url": "/api//user/:user_id/likes",
+    "title": "Get Event data",
+    "name": "Get_Event",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":user_id",
+            "description": "<p>Id of user</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Array Likes Data.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Like Data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Like id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event_comment",
+            "description": "<p>Comment data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_comment.id",
+            "description": "<p>Comment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event_comment.content",
+            "description": "<p>Comment content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.array.event_comment.created_at",
+            "description": "<p>Comment create date</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event_comment.event",
+            "description": "<p>Event data array of Comment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_comment.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event_comment.event.title",
+            "description": "<p>Event title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event_comment.event.short_story",
+            "description": "<p>Event short_story</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event_comment.event.status",
+            "description": "<p>Event status data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_comment.event.status.id",
+            "description": "<p>Event status id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event_comment.event.status.title",
+            "description": "<p>Event status title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event_comment.user",
+            "description": "<p>User data array of Comment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_comment.user.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event_comment.user.name",
+            "description": "<p>User name</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":5,\n        \"event_comment\":\n            {\n                \"id\":11,\n                \"content\":\"Test Comment\",\n                \"created_at\":\"2018-05-21 07:55:54\",\n                \"event\":\n                    {\n                        \"id\":7,\n                        \"title\":\"testing\",\n                        \"short_story\":\"short_story\",\n                        \"status\":\n                            {\n                                \"id\":12,\n                                \"title\":\"Trending\"\n                            }\n                    },\n                \"user\":\n                    {\n                        \"id\":6,\n                        \"name\":\"Test_user\"\n                    }\n            }\n    },\n    .......\n\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>User Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n User Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentLikeController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
     "type": "get",
     "url": "/api/event/:event_id/comment/:comment_id",
     "title": "Gel comment data of event from id",
@@ -6742,7 +7025,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "  HTTP/1.1 200 OK\n[\n   'status'=>true\n]",
+          "content": "  HTTP/1.1 201 OK\n[\n   'status'=>true\n]",
           "type": "json"
         }
       ]
@@ -8410,8 +8693,8 @@
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -8421,8 +8704,8 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
@@ -8486,8 +8769,8 @@
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -8497,8 +8780,8 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
