@@ -3375,6 +3375,14 @@ define({ "api": [
             "description": "<p>parameter(key) and value of validation error</p>"
           }
         ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -3393,6 +3401,11 @@ define({ "api": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n{\n     \"supplies\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
           "type": "json"
         }
       ]
@@ -3818,6 +3831,14 @@ define({ "api": [
     },
     "error": {
       "fields": {
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -3831,6 +3852,11 @@ define({ "api": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
           "type": "json"
         }
       ]
@@ -5059,12 +5085,25 @@ define({ "api": [
             "field": "array.parameter",
             "description": "<p>parameter (key) and value of validation error</p>"
           }
+        ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
         ]
       },
       "examples": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n{\n     \"city\":\n         [\n             \"The city field is required.\",\n             ......\n         ],\n     \"short_story\":\n         [\n             \"The short story field is required.\",\n             .....\n         ],\n     .....\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
           "type": "json"
         }
       ]
@@ -5602,6 +5641,14 @@ define({ "api": [
             "description": "<p>parameter(key) and value of validation error</p>"
           }
         ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -5620,6 +5667,11 @@ define({ "api": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n{\n     \"supplies\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
           "type": "json"
         }
       ]
