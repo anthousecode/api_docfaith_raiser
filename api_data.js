@@ -3423,7 +3423,7 @@ define({ "api": [
             "type": "File",
             "optional": false,
             "field": "images.array.file",
-            "description": "<p>URL of image</p>"
+            "description": "<p>File of image</p>"
           },
           {
             "group": "Parameter",
@@ -4344,133 +4344,147 @@ define({ "api": [
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.money",
+            "field": "data.event.demand.demand_type.id",
+            "description": "<p>Id of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.event.demand.demand_type.title",
+            "description": "<p>Name of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.event.demand.money",
             "description": "<p>Array Event demand data demand type array money data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array",
+            "field": "data.event.demand.money.array",
             "description": "<p>Event demand data demand type array money data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array.id",
+            "field": "data.event.demand.money.array.id",
             "description": "<p>Array Event demand data demand type money id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array.event_demand_id",
+            "field": "data.event.demand.money.array.event_demand_id",
             "description": "<p>Array Event demand data demand type money event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array.account",
+            "field": "data.event.demand.money.array.account",
             "description": "<p>Array Event demand data demand type money account</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array.summ",
+            "field": "data.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.money.array.payment_frequency_id",
+            "field": "data.event.demand.money.array.payment_frequency_id",
             "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers",
+            "field": "data.event.demand.volunteers",
             "description": "<p>Array Event demand data demand type array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers.array",
+            "field": "data.event.demand.volunteers.array",
             "description": "<p>Event demand data demand type array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers.array.id",
+            "field": "data.event.demand.volunteers.array.id",
             "description": "<p>Array Event demand data demand type volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers.array.event_demand_id",
+            "field": "data.event.demand.volunteers.array.event_demand_id",
             "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers.array.name",
+            "field": "data.event.demand.volunteers.array.name",
             "description": "<p>Array Event demand data demand type volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.volunteers.array.count",
+            "field": "data.event.demand.volunteers.array.count",
             "description": "<p>Array Event demand data demand type volunteers count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies",
+            "field": "data.event.demand.supplies",
             "description": "<p>Array Event demand data demand type array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies.array",
+            "field": "data.event.demand.supplies.array",
             "description": "<p>Event demand data demand type array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies.array.id",
+            "field": "data.event.demand.supplies.array.id",
             "description": "<p>Array Event demand data demand type supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies.array.event_demand_id",
+            "field": "data.event.demand.supplies.array.event_demand_id",
             "description": "<p>Array Event demand data demand type supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies.array.name",
+            "field": "data.event.demand.supplies.array.name",
             "description": "<p>Array Event demand data demand type supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type.supplies.array.count",
+            "field": "data.event.demand.supplies.array.count",
             "description": "<p>Array Event demand data demand type supplies count</p>"
           }
         ]
@@ -5458,6 +5472,1838 @@ define({ "api": [
     "groupTitle": "Event"
   },
   {
+    "type": "put",
+    "url": "/api/event/:event_id/comment",
+    "title": "Create new Comment to event",
+    "name": "Create_Comment",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event for commenting</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Comment content. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images",
+            "description": "<p>Array of array image data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images.array",
+            "description": "<p>Array of image data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "optional": false,
+            "field": "images.array.",
+            "description": "<p>File of image</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"content\": \"Coment content\"\n  \"images\":\n     [\n         1 :\n             [\n                 'file' : 'file content'\n             ]\n         2 :\n             [\n                 'file' : 'file content'\n             ]\n         ........\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of comments.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Comment id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Content of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>Content create date.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like_count",
+            "description": "<p>Count of the comments likes.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like",
+            "description": "<p>Array of the likes data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array",
+            "description": "<p>Array of the like data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.id",
+            "description": "<p>Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user_id",
+            "description": "<p>User Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.event_comment_id",
+            "description": "<p>Comment Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array.user",
+            "description": "<p>User data of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user.id",
+            "description": "<p>User id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.like.array.user.name",
+            "description": "<p>User name of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.like.array.user.is_admin",
+            "description": "<p>User is_admin of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.user.is_admin",
+            "description": "<p>User is_admin of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image",
+            "description": "<p>Array of data images.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array",
+            "description": "<p>Data array of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.id",
+            "description": "<p>Id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.event_comment_id",
+            "description": "<p>Comment id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image_id",
+            "description": "<p>File id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array.image",
+            "description": "<p>Data array of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image.id",
+            "description": "<p>Id of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.image.array.image.url",
+            "description": "<p>Url of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 201 OK\n{\n   \"current_page\":1,\n   \"data\":\n       [\n           {\n               \"id\":12,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:58:07\",\n               \"like_count\":0,\n               \"like\":[],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":[]\n           },\n           {\n               \"id\":11,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:55:54\",\n               \"like_count\":3,\n               \"like\":\n                   [\n                       {\n                           \"id\":1,\n                           \"user_id\":6,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":6,\n                                   \"name\":\"Test_user\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       {\n                           \"id\":2,\n                           \"user_id\":1,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":1,\n                                   \"name\":\"Test User\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       ......\n                   ],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":\n                   [\n                       {\n                           \"id\":1,\n                           \"event_comment_id\":11,\n                           \"image_id\":2,\n                           \"image\":\n                               {\n                                   \"id\":2,\n                                   \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                               }\n                       }\n                   ]\n           },\n           ........\n       ],\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=1\",\n   \"from\":1,\n   \"last_page\":2,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"next_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":10,\n   \"total\":12\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"content\":\n         [\n             \"The city field is required.\",\n             ......\n         ],\n     .....\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/comment/:comment_id",
+    "title": "Gel comment data of event from id",
+    "name": "Get_comment",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event for commenting</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":comment_id",
+            "description": "<p>Id of comment</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Data array of comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Comment id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.event_id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user_id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.content",
+            "description": "<p>Content of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.created_at",
+            "description": "<p>Content create date.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.like_count",
+            "description": "<p>Count of the comments likes.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.like",
+            "description": "<p>Array of the likes data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.like.array",
+            "description": "<p>Array of the like data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.like.array.id",
+            "description": "<p>Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.like.array.user_id",
+            "description": "<p>User Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.like.array.event_comment_id",
+            "description": "<p>Comment Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.like.array.user",
+            "description": "<p>User data of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.like.array.user.id",
+            "description": "<p>User id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "array.like.array.user.name",
+            "description": "<p>User name of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "array.like.array.user.is_admin",
+            "description": "<p>User is_admin of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.user",
+            "description": "<p>User data of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user.id",
+            "description": "<p>User id of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "array.user.name",
+            "description": "<p>User name of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "array.user.is_admin",
+            "description": "<p>User is_admin of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.user.image",
+            "description": "<p>Array of data images.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.user.image.array",
+            "description": "<p>Data array of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user.image.array.id",
+            "description": "<p>Id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user.image.array.event_comment_id",
+            "description": "<p>Comment id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user.image.array.image_id",
+            "description": "<p>File id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array.user.image.array.image",
+            "description": "<p>Data array of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user.image.array.image.id",
+            "description": "<p>Id of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "array.user.image.array.image.url",
+            "description": "<p>Url of the image file.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 201 OK\n[\n    \"id\":11,\n    \"event_id\":7,\n    \"user_id\":6,\n    \"content\":\"Test Comment\",\n    \"created_at\":\"2018-05-21 07:55:54\",\n    \"like_count\":3,\n    \"like\":\n        [\n            {\n                \"id\":1,\n                \"user_id\":6,\n                \"event_comment_id\":11,\n                \"user\":\n                    {\n                        \"id\":6,\n                        \"name\":\"Test_user\",\n                        \"is_admin\":0,\n                    }\n            },\n            {\n                \"id\":2,\n                \"user_id\":1,\n                \"event_comment_id\":11,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\",\n                        \"is_admin\":0,\n                    }\n            },\n            ......\n        ],\n    \"user\":\n        {\n            \"id\":6,\n            \"name\":\"Test_user\",\n            \"is_admin\":0\n        },\n    \"image\":\n        [\n            {\n                \"id\":1,\n                \"event_comment_id\":11,\n                \"image_id\":2,\n                \"image\":\n                    {\n                        \"id\":2,\n                        \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                    }\n            }\n        ]\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Comment not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "delete",
+    "url": "/api/event/:event_id/comment/:comment_id",
+    "title": "Remove comment data of event from id",
+    "name": "Remove_comment",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event for commenting</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":comment_id",
+            "description": "<p>Id of comment</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of remove comment.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n[\n   'status'=>true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Comment not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "post",
+    "url": "/api/event/:event_id/comment",
+    "title": "Gel comments of event",
+    "name": "Shove_comments",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event for commenting</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of comments.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Comment id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Content of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>Content create date.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like_count",
+            "description": "<p>Count of the comments likes.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like",
+            "description": "<p>Array of the likes data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array",
+            "description": "<p>Array of the like data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.id",
+            "description": "<p>Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user_id",
+            "description": "<p>User Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.event_comment_id",
+            "description": "<p>Comment Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array.user",
+            "description": "<p>User data of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user.id",
+            "description": "<p>User id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.like.array.user.name",
+            "description": "<p>User name of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.like.array.user.is_admin",
+            "description": "<p>User is_admin of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.user.is_admin",
+            "description": "<p>User is_admin of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image",
+            "description": "<p>Array of data images.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array",
+            "description": "<p>Data array of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.id",
+            "description": "<p>Id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.event_comment_id",
+            "description": "<p>Comment id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image_id",
+            "description": "<p>File id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array.image",
+            "description": "<p>Data array of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image.id",
+            "description": "<p>Id of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.image.array.image.url",
+            "description": "<p>Url of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 201 OK\n{\n   \"current_page\":1,\n   \"data\":\n       [\n           {\n               \"id\":12,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:58:07\",\n               \"like_count\":0,\n               \"like\":[],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":[]\n           },\n           {\n               \"id\":11,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:55:54\",\n               \"like_count\":3,\n               \"like\":\n                   [\n                       {\n                           \"id\":1,\n                           \"user_id\":6,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":6,\n                                   \"name\":\"Test_user\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       {\n                           \"id\":2,\n                           \"user_id\":1,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":1,\n                                   \"name\":\"Test User\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       ......\n                   ],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":\n                   [\n                       {\n                           \"id\":1,\n                           \"event_comment_id\":11,\n                           \"image_id\":2,\n                           \"image\":\n                               {\n                                   \"id\":2,\n                                   \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                               }\n                       }\n                   ]\n           },\n           ........\n       ],\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=1\",\n   \"from\":1,\n   \"last_page\":2,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"next_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":10,\n   \"total\":12\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"content\":\n         [\n             \"The city field is required.\",\n             ......\n         ],\n     .....\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "post",
+    "url": "/event/user/:user_id/comments",
+    "title": "Gel comments of user",
+    "name": "Users_comments",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":user_id",
+            "description": "<p>Id of user</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.title",
+            "description": "<p>Event title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.story",
+            "description": "<p>Event story</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.short_story",
+            "description": "<p>Event short story</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.address",
+            "description": "<p>Event address</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.event.is_approved",
+            "description": "<p>Event approved status(true - is approved)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.event.is_submit",
+            "description": "<p>Event submit status(true - is submit)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.user",
+            "description": "<p>Event Author data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.user.id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.user.name",
+            "description": "<p>Author name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Boot",
+            "optional": false,
+            "field": "data.array.event.user.is_admin",
+            "description": "<p>Author it is user-admin(true - is admin)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.status",
+            "description": "<p>Array Event status data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.status.id",
+            "description": "<p>Event status id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.status.title",
+            "description": "<p>Event status title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.purpose",
+            "description": "<p>Array Event purpose data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.purpose.id",
+            "description": "<p>Event purpose id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.purpose.title",
+            "description": "<p>Event purpose title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.religion",
+            "description": "<p>Array Event religion data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.religion.id",
+            "description": "<p>Event religion id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.religion.title",
+            "description": "<p>Event religion title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.type_destination",
+            "description": "<p>Array Event type destination data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.type_destination.id",
+            "description": "<p>Event type destination id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.type_destination.title",
+            "description": "<p>Event type destination title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.country",
+            "description": "<p>Array Event country data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.country.id",
+            "description": "<p>Event country id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.country.name",
+            "description": "<p>Event country name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.country.sortname",
+            "description": "<p>Event country sortname</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.state",
+            "description": "<p>Array Event state data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.state.id",
+            "description": "<p>Event state id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.state.name",
+            "description": "<p>Event state name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.city",
+            "description": "<p>Array Event city data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.city.id",
+            "description": "<p>Event city id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.city.name",
+            "description": "<p>Event city name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand",
+            "description": "<p>Array Event demand data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.id",
+            "description": "<p>Event demand data id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type_id",
+            "description": "<p>Event demand data demand type id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type",
+            "description": "<p>Array Event demand data demand type data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type.id",
+            "description": "<p>Id of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type.title",
+            "description": "<p>Name of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.preview",
+            "description": "<p>Data Preview of event</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.preview.id",
+            "description": "<p>Event image id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.preview.image_id",
+            "description": "<p>Event image file id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.preview.is_preview",
+            "description": "<p>Preview status of image</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.preview.image",
+            "description": "<p>Array Event image file data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.preview.image.id",
+            "description": "<p>Event image file id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.preview.image.title",
+            "description": "<p>Event image file title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.preview.image.url",
+            "description": "<p>Event image file url</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of comments.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Comment id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Content of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>Content create date.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like_count",
+            "description": "<p>Count of the comments likes.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like",
+            "description": "<p>Array of the likes data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array",
+            "description": "<p>Array of the like data.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.id",
+            "description": "<p>Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user_id",
+            "description": "<p>User Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.event_comment_id",
+            "description": "<p>Comment Id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array.user",
+            "description": "<p>User data of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user.id",
+            "description": "<p>User id of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.like.array.user.name",
+            "description": "<p>User name of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.like.array.user.is_admin",
+            "description": "<p>User is_admin of the like.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.user.is_admin",
+            "description": "<p>User is_admin of the comment.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image",
+            "description": "<p>Array of data images.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array",
+            "description": "<p>Data array of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.id",
+            "description": "<p>Id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.event_comment_id",
+            "description": "<p>Comment id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image_id",
+            "description": "<p>File id of the image.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array.image",
+            "description": "<p>Data array of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image.id",
+            "description": "<p>Id of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.image.array.image.url",
+            "description": "<p>Url of the image file.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Data array of the event.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 201 OK\n{\n   \"current_page\":1,\n   \"data\":\n       [\n           {\n               \"id\":11,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:55:54\",\n               \"like_count\":3,\n               \"like\":\n                   [\n                       {\n                           \"id\":1,\n                           \"user_id\":6,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":6,\n                                   \"name\":\"Test_user\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       {\n                           \"id\":2,\n                           \"user_id\":1,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":1,\n                                   \"name\":\"Test User\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       ......\n                   ],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":\n                   [\n                       {\n                           \"id\":1,\n                           \"event_comment_id\":11,\n                           \"image_id\":2,\n                           \"image\":\n                               {\n                                   \"id\":2,\n                                   \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                               }\n                       },\n                       ........\n                   ],\n               \"event\":\n                   {\n                       \"id\": 7,\n                       \"title\": \"testing\",\n                       \"story\": \"testing story\",\n                       \"short_story\": \"short_story\",\n                       \"address\": \"lalalala\",\n                       \"type_destination_id\": 10,\n                       \"purpose_id\": 18,\n                       \"religion_id\": 11,\n                       \"country_id\": 1,\n                       \"state_id\": 1,\n                       \"city_id\": 1,\n                       \"user_id\": 6,\n                       \"status_id\": 0,\n                       \"is_approved\": 0,\n                       \"is_submit\": 0,\n                       \"created_at\": \"2018-05-21 06:55:34\",\n                       \"updated_at\": \"2018-05-21 06:55:34\",\n                       \"preview\":\n                           [\n                               \"id\":1,\n                               image_id\":1,\n                               image\":\n                                  {\n                                      \"id\":1,\n                                      \"title\":\"test\",\n                                      \"url\":\"storage\\/images\\/Ur4qM78zhHholK9Y5ylcxoUYlwdx29efD9bBCNG2.jpeg\"\n                                  }\n                           ]\n                       \"user\":\n                           {\n                               \"id\": 6,\n                               \"name\": \"Test_user\",\n                               \"is_admin\": 0\n                           },\n                       \"status\": null,\n                       \"purpose\":\n                           {\n                               \"id\": 18,\n                               \"title\": \"Children & Education\"\n                           },\n                       \"religion\":\n                           {\n                               \"id\": 11,\n                               \"title\": \"Christianity\"\n                           },\n                       \"type_destination\":\n                           {\n                               \"id\": 10,\n                               \"title\": \"Charity\"\n                           },\n                       \"demand\": [],\n                       \"country\":\n                           {\n                               \"id\": 1,\n                               \"sortname\": \"AF\",\n                               \"name\": \"Afghanistan\"\n                           },\n                       \"state\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Andaman and Nicobar Islands\"\n                           },\n                       \"city\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Bombuflat\"\n                           }\n                   }\n           },\n           ........\n       ],\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=1\",\n   \"from\":1,\n   \"last_page\":2,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"next_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":10,\n   \"total\":12\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     User not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
     "type": "get",
     "url": "/api/geo/countries",
     "title": "Get all countries",
@@ -6021,8 +7867,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -6032,8 +7878,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
@@ -6097,8 +7943,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -6108,8 +7954,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
