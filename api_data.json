@@ -2069,6 +2069,13 @@
     "title": "New user password(for using in profile)",
     "name": "Change_Password_Profile_",
     "group": "Authentication",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -2449,6 +2456,13 @@
     "url": "/api/logout",
     "title": "Logout User. After Logout user redirected to homepage (\"/\")",
     "name": "Logout_User",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "group": "Authentication",
     "header": {
       "fields": {
@@ -2831,6 +2845,13 @@
     "title": "Change preview of event",
     "name": "Change_preview_of_event",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -2886,6 +2907,14 @@
     },
     "error": {
       "fields": {
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -2905,6 +2934,11 @@
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not found\n Event not found",
           "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
+          "type": "json"
         }
       ]
     },
@@ -2918,6 +2952,13 @@
     "title": "Create new Event",
     "name": "Create_Event",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3167,6 +3208,13 @@
     "title": "Create video and image to event",
     "name": "Create_demand",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3359,6 +3407,13 @@
     "title": "Create video and image to event",
     "name": "Create_media",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3530,6 +3585,13 @@
     "title": "Create new message to event chat",
     "name": "Create_messate",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3701,6 +3763,13 @@
     "title": "Delete  event",
     "name": "Delete_event",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3776,6 +3845,13 @@
     "title": "Delete image of event",
     "name": "Delete_image",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -3851,6 +3927,13 @@
     "title": "Delete video of event",
     "name": "Delete_video",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -4526,6 +4609,13 @@
     "title": "Submit Event to approve admin",
     "name": "Submit_Event",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -4693,6 +4783,14 @@
     },
     "error": {
       "fields": {
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -4707,6 +4805,11 @@
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not found",
           "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
+          "type": "json"
         }
       ]
     },
@@ -4720,6 +4823,13 @@
     "title": "Update new Event",
     "name": "Update_Event",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -4969,6 +5079,13 @@
     "title": "Update image of event",
     "name": "Update_Image",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -5039,6 +5156,14 @@
             "description": "<p>No value title</p>"
           }
         ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -5058,6 +5183,11 @@
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n Bad Request",
           "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
+          "type": "json"
         }
       ]
     },
@@ -5071,6 +5201,13 @@
     "title": "Update video of event",
     "name": "Update_Video",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -5141,6 +5278,14 @@
             "description": "<p>No value title</p>"
           }
         ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -5160,6 +5305,11 @@
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n Bad Request",
           "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
+          "type": "json"
         }
       ]
     },
@@ -5173,6 +5323,13 @@
     "title": "Create video and image to event",
     "name": "Update_demand",
     "group": "Event",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -5477,6 +5634,13 @@
     "title": "Create new Comment to event",
     "name": "Create_Comment",
     "group": "Event_Comment",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -6157,11 +6321,320 @@
     "groupTitle": "Event_Comment"
   },
   {
+    "type": "get",
+    "url": "/api/event/comment/:comment_id/like",
+    "title": "Like or Dislike comment",
+    "name": "Like",
+    "group": "Event_Comment",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":comment_id",
+            "description": "<p>Id of comment</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Count of  likes.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n     10",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n         Comment Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentLikeController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/comment/:comment_id/like/count",
+    "title": "Count comments likes",
+    "name": "Like_count",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":comment_id",
+            "description": "<p>Id of comment</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Count of  likes.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n     10",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n         Comment Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentLikeController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/comment/:comment_id/likes",
+    "title": "Likes comment",
+    "name": "Likes_comment",
+    "group": "Event_Comment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":comment_id",
+            "description": "<p>Id of comment</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "likes",
+            "description": "<p>Likes data array.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "likes.like",
+            "description": "<p>Like data array.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "likes.like.id",
+            "description": "<p>Like id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "likes.like.user_id",
+            "description": "<p>Like user id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "likes.like.event_comment_id",
+            "description": "<p>Like to comment with id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "likes.like.user",
+            "description": "<p>Likes user data array.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "likes.like.user.id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "likes.like.user.name",
+            "description": "<p>User name.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":1,\n        \"user_id\":1,\n        \"event_comment_id\":1,\n        \"user\":\n            {\n                \"id\":1,\n                \"name\":\"User Name\",\n            }\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n         Comment Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/CommentLikeController.php",
+    "groupTitle": "Event_Comment"
+  },
+  {
     "type": "delete",
     "url": "/api/event/:event_id/comment/:comment_id",
     "title": "Remove comment data of event from id",
     "name": "Remove_comment",
     "group": "Event_Comment",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
@@ -6224,16 +6697,29 @@
     },
     "error": {
       "fields": {
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Access is denied. If the object does not belong to the user</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
             "optional": false,
-            "field": "event",
+            "field": "mess",
             "description": "<p>Not found</p>"
           }
         ]
       },
       "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n     Forbidden",
+          "type": "json"
+        },
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not Found\n     Event not found",
@@ -6623,6 +7109,13 @@
     "title": "Gel comments of user",
     "name": "Users_comments",
     "group": "Event_Comment",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
     "parameter": {
       "fields": {
         "Parameter": [
