@@ -6663,6 +6663,223 @@ define({ "api": [
             "group": "200",
             "type": "Number",
             "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of comments.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Comment id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Content of the comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>Content create date.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like_count",
+            "description": "<p>Count of the comments likes.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like",
+            "description": "<p>Array of the likes data.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array",
+            "description": "<p>Array of the like data.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.id",
+            "description": "<p>Id of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user_id",
+            "description": "<p>User Id of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.event_comment_id",
+            "description": "<p>Comment Id of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.like.array.user",
+            "description": "<p>User data of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.like.array.user.id",
+            "description": "<p>User id of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.like.array.user.name",
+            "description": "<p>User name of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.like.array.user.is_admin",
+            "description": "<p>User is_admin of the like.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data of the comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id of the comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name of the comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.user.is_admin",
+            "description": "<p>User is_admin of the comment.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image",
+            "description": "<p>Array of data images.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array",
+            "description": "<p>Data array of the image.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.id",
+            "description": "<p>Id of the image.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.event_comment_id",
+            "description": "<p>Comment id of the image.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image_id",
+            "description": "<p>File id of the image.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user.image.array.image",
+            "description": "<p>Data array of the image file.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.image.array.image.id",
+            "description": "<p>Id of the image file.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.image.array.image.url",
+            "description": "<p>Url of the image file.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Data array of the event.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
             "field": "data.array.event.id",
             "description": "<p>Event id</p>"
           },
@@ -6987,284 +7204,65 @@ define({ "api": [
             "optional": false,
             "field": "data.array.event.preview.image.url",
             "description": "<p>Event image file url</p>"
-          }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
           },
           {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of comments.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.id",
-            "description": "<p>Comment id.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event_id",
-            "description": "<p>Event id.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user_id",
-            "description": "<p>User id.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.content",
-            "description": "<p>Content of the comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.created_at",
-            "description": "<p>Content create date.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.like_count",
-            "description": "<p>Count of the comments likes.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.like",
-            "description": "<p>Array of the likes data.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.like.array",
-            "description": "<p>Array of the like data.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.like.array.id",
-            "description": "<p>Id of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.like.array.user_id",
-            "description": "<p>User Id of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.like.array.event_comment_id",
-            "description": "<p>Comment Id of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.like.array.user",
-            "description": "<p>User data of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.like.array.user.id",
-            "description": "<p>User id of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.like.array.user.name",
-            "description": "<p>User name of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Bool",
-            "optional": false,
-            "field": "data.array.like.array.user.is_admin",
-            "description": "<p>User is_admin of the like.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.user",
-            "description": "<p>User data of the comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user.id",
-            "description": "<p>User id of the comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.user.name",
-            "description": "<p>User name of the comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Bool",
-            "optional": false,
-            "field": "data.array.user.is_admin",
-            "description": "<p>User is_admin of the comment.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.user.image",
-            "description": "<p>Array of data images.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.user.image.array",
-            "description": "<p>Data array of the image.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user.image.array.id",
-            "description": "<p>Id of the image.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user.image.array.event_comment_id",
-            "description": "<p>Comment id of the image.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user.image.array.image_id",
-            "description": "<p>File id of the image.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.user.image.array.image",
-            "description": "<p>Data array of the image file.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.user.image.array.image.id",
-            "description": "<p>Id of the image file.</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.user.image.array.image.url",
-            "description": "<p>Url of the image file.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array.event",
-            "description": "<p>Data array of the event.</p>"
-          },
-          {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "from",
             "description": "<p>Number of start element.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "to",
             "description": "<p>Number of end element.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "total",
             "description": "<p>Count of all elements.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "per_page",
             "description": "<p>Elements on page.</p>"
           },
           {
-            "group": "201",
+            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "last_page",
@@ -7275,7 +7273,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "  HTTP/1.1 201 OK\n{\n   \"current_page\":1,\n   \"data\":\n       [\n           {\n               \"id\":11,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:55:54\",\n               \"like_count\":3,\n               \"like\":\n                   [\n                       {\n                           \"id\":1,\n                           \"user_id\":6,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":6,\n                                   \"name\":\"Test_user\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       {\n                           \"id\":2,\n                           \"user_id\":1,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":1,\n                                   \"name\":\"Test User\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       ......\n                   ],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":\n                   [\n                       {\n                           \"id\":1,\n                           \"event_comment_id\":11,\n                           \"image_id\":2,\n                           \"image\":\n                               {\n                                   \"id\":2,\n                                   \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                               }\n                       },\n                       ........\n                   ],\n               \"event\":\n                   {\n                       \"id\": 7,\n                       \"title\": \"testing\",\n                       \"story\": \"testing story\",\n                       \"short_story\": \"short_story\",\n                       \"address\": \"lalalala\",\n                       \"type_destination_id\": 10,\n                       \"purpose_id\": 18,\n                       \"religion_id\": 11,\n                       \"country_id\": 1,\n                       \"state_id\": 1,\n                       \"city_id\": 1,\n                       \"user_id\": 6,\n                       \"status_id\": 0,\n                       \"is_approved\": 0,\n                       \"is_submit\": 0,\n                       \"created_at\": \"2018-05-21 06:55:34\",\n                       \"updated_at\": \"2018-05-21 06:55:34\",\n                       \"preview\":\n                           [\n                               \"id\":1,\n                               image_id\":1,\n                               image\":\n                                  {\n                                      \"id\":1,\n                                      \"title\":\"test\",\n                                      \"url\":\"storage\\/images\\/Ur4qM78zhHholK9Y5ylcxoUYlwdx29efD9bBCNG2.jpeg\"\n                                  }\n                           ]\n                       \"user\":\n                           {\n                               \"id\": 6,\n                               \"name\": \"Test_user\",\n                               \"is_admin\": 0\n                           },\n                       \"status\": null,\n                       \"purpose\":\n                           {\n                               \"id\": 18,\n                               \"title\": \"Children & Education\"\n                           },\n                       \"religion\":\n                           {\n                               \"id\": 11,\n                               \"title\": \"Christianity\"\n                           },\n                       \"type_destination\":\n                           {\n                               \"id\": 10,\n                               \"title\": \"Charity\"\n                           },\n                       \"demand\": [],\n                       \"country\":\n                           {\n                               \"id\": 1,\n                               \"sortname\": \"AF\",\n                               \"name\": \"Afghanistan\"\n                           },\n                       \"state\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Andaman and Nicobar Islands\"\n                           },\n                       \"city\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Bombuflat\"\n                           }\n                   }\n           },\n           ........\n       ],\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=1\",\n   \"from\":1,\n   \"last_page\":2,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"next_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":10,\n   \"total\":12\n}",
+          "content": "  HTTP/1.1 200 OK\n{\n   \"current_page\":1,\n   \"data\":\n       [\n           {\n               \"id\":11,\n               \"event_id\":7,\n               \"user_id\":6,\n               \"content\":\"Test Comment\",\n               \"created_at\":\"2018-05-21 07:55:54\",\n               \"like_count\":3,\n               \"like\":\n                   [\n                       {\n                           \"id\":1,\n                           \"user_id\":6,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":6,\n                                   \"name\":\"Test_user\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       {\n                           \"id\":2,\n                           \"user_id\":1,\n                           \"event_comment_id\":11,\n                           \"user\":\n                               {\n                                   \"id\":1,\n                                   \"name\":\"Test User\",\n                                   \"is_admin\":0,\n                               }\n                       },\n                       ......\n                   ],\n               \"user\":\n                   {\n                       \"id\":6,\n                       \"name\":\"Test_user\",\n                       \"is_admin\":0\n                   },\n               \"image\":\n                   [\n                       {\n                           \"id\":1,\n                           \"event_comment_id\":11,\n                           \"image_id\":2,\n                           \"image\":\n                               {\n                                   \"id\":2,\n                                   \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                               }\n                       },\n                       ........\n                   ],\n               \"event\":\n                   {\n                       \"id\": 7,\n                       \"title\": \"testing\",\n                       \"story\": \"testing story\",\n                       \"short_story\": \"short_story\",\n                       \"address\": \"lalalala\",\n                       \"type_destination_id\": 10,\n                       \"purpose_id\": 18,\n                       \"religion_id\": 11,\n                       \"country_id\": 1,\n                       \"state_id\": 1,\n                       \"city_id\": 1,\n                       \"user_id\": 6,\n                       \"status_id\": 0,\n                       \"is_approved\": 0,\n                       \"is_submit\": 0,\n                       \"created_at\": \"2018-05-21 06:55:34\",\n                       \"updated_at\": \"2018-05-21 06:55:34\",\n                       \"preview\":\n                           [\n                               \"id\":1,\n                               image_id\":1,\n                               image\":\n                                  {\n                                      \"id\":1,\n                                      \"title\":\"test\",\n                                      \"url\":\"storage\\/images\\/Ur4qM78zhHholK9Y5ylcxoUYlwdx29efD9bBCNG2.jpeg\"\n                                  }\n                           ]\n                       \"user\":\n                           {\n                               \"id\": 6,\n                               \"name\": \"Test_user\",\n                               \"is_admin\": 0\n                           },\n                       \"status\": null,\n                       \"purpose\":\n                           {\n                               \"id\": 18,\n                               \"title\": \"Children & Education\"\n                           },\n                       \"religion\":\n                           {\n                               \"id\": 11,\n                               \"title\": \"Christianity\"\n                           },\n                       \"type_destination\":\n                           {\n                               \"id\": 10,\n                               \"title\": \"Charity\"\n                           },\n                       \"demand\": [],\n                       \"country\":\n                           {\n                               \"id\": 1,\n                               \"sortname\": \"AF\",\n                               \"name\": \"Afghanistan\"\n                           },\n                       \"state\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Andaman and Nicobar Islands\"\n                           },\n                       \"city\":\n                           {\n                               \"id\": 1,\n                               \"name\": \"Bombuflat\"\n                           }\n                   }\n           },\n           ........\n       ],\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=1\",\n   \"from\":1,\n   \"last_page\":2,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"next_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment?page=2\",\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/comment\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":10,\n   \"total\":12\n}",
           "type": "json"
         }
       ]
