@@ -2664,7 +2664,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/base/cities/search_parameters",
+    "url": "/api/base/parameters",
     "title": "Get all selected parameters for search and create event",
     "name": "Search_Parameters",
     "group": "Base",
