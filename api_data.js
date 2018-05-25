@@ -486,6 +486,795 @@ define({ "api": [
     "groupTitle": "Admin_Demand_Type"
   },
   {
+    "type": "put",
+    "url": "/api/admin/event/:event_id/approve",
+    "title": "Approved Event",
+    "name": "Approved_Event",
+    "group": "Admin_Event",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "event_id",
+            "description": "<p>Id of Event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status operation.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n [\n     'status'=>true\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "groupTitle": "Admin_Event"
+  },
+  {
+    "type": "put",
+    "url": "/api/admin/event/:event_id/send_back",
+    "title": "Send Back Event",
+    "name": "Send_Back_Event",
+    "group": "Admin_Event",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "event_id",
+            "description": "<p>Id of Event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status operation.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n [\n     'status'=>true\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "groupTitle": "Admin_Event"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/event/un_approved",
+    "title": "Get UnApproved Event",
+    "name": "UnApproved_Event",
+    "group": "Admin_Event",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Number of page. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.title",
+            "description": "<p>Event title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.story",
+            "description": "<p>Event story</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.short_story",
+            "description": "<p>Event short story</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.address",
+            "description": "<p>Event address</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.event.is_approved",
+            "description": "<p>Event approved status(true - is approved)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.event.is_submit",
+            "description": "<p>Event submit status(true - is submit)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.user",
+            "description": "<p>Event Author data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.user.id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.user.name",
+            "description": "<p>Author name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.images",
+            "description": "<p>Array Event preview</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.images.array",
+            "description": "<p>Array image data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.images.array.id",
+            "description": "<p>Event image id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.images.array.image_id",
+            "description": "<p>Event image file id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.images.array.is_preview",
+            "description": "<p>Preview status of image</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.images.array.image",
+            "description": "<p>Array Event image file data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.images.array.image.title",
+            "description": "<p>Event image file title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.images.array.image.url",
+            "description": "<p>Event image file url</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.event_status",
+            "description": "<p>Array Event status data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.event_status.id",
+            "description": "<p>Event status id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.event_status.title",
+            "description": "<p>Event status title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.purpose",
+            "description": "<p>Array Event purpose data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.purpose.id",
+            "description": "<p>Event purpose id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.purpose.title",
+            "description": "<p>Event purpose title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.religion",
+            "description": "<p>Array Event religion data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.religion.id",
+            "description": "<p>Event religion id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.religion.title",
+            "description": "<p>Event religion title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.type_destination",
+            "description": "<p>Array Event type destination data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.type_destination.id",
+            "description": "<p>Event type destination id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.type_destination.title",
+            "description": "<p>Event type destination title</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.country",
+            "description": "<p>Array Event country data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.country.id",
+            "description": "<p>Event country id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.country.name",
+            "description": "<p>Event country name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.country.sortname",
+            "description": "<p>Event country sortname</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.state",
+            "description": "<p>Array Event state data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.state.id",
+            "description": "<p>Event state id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.state.name",
+            "description": "<p>Event state name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.city",
+            "description": "<p>Array Event city data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.city.id",
+            "description": "<p>Event city id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.city.name",
+            "description": "<p>Event city name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand",
+            "description": "<p>Array Event demand data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.id",
+            "description": "<p>Event demand data id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type_id",
+            "description": "<p>Event demand data demand type id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type",
+            "description": "<p>Array Event demand data demand type data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type.id",
+            "description": "<p>Id of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.demand_type.title",
+            "description": "<p>Name of demand type</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.money",
+            "description": "<p>Array Event demand data demand type array money data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.money.array",
+            "description": "<p>Event demand data demand type array money data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.money.array.id",
+            "description": "<p>Array Event demand data demand type money id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.money.array.event_demand_id",
+            "description": "<p>Array Event demand data demand type money event demand id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.money.array.account",
+            "description": "<p>Array Event demand data demand type money account</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.money.array.summ",
+            "description": "<p>Array Event demand data demand type money summ</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.money.array.payment_frequency_id",
+            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers",
+            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array",
+            "description": "<p>Event demand data demand type array volunteers data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.id",
+            "description": "<p>Array Event demand data demand type volunteers id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_demand_id",
+            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.name",
+            "description": "<p>Array Event demand data demand type volunteers name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.count",
+            "description": "<p>Array Event demand data demand type volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies",
+            "description": "<p>Array Event demand data demand type array supplies data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array",
+            "description": "<p>Event demand data demand type array supplies data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.id",
+            "description": "<p>Array Event demand data demand type supplies id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_demand_id",
+            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.name",
+            "description": "<p>Array Event demand data demand type supplies name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.count",
+            "description": "<p>Array Event demand data demand type supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of events.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of event.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "groupTitle": "Admin_Event"
+  },
+  {
     "type": "get",
     "url": "/api/admin/saerch/purpose/create",
     "title": "Create new purpose",
@@ -3593,184 +4382,6 @@ define({ "api": [
     "groupTitle": "Event"
   },
   {
-    "type": "put",
-    "url": "/api/event/:event_id/chat/create",
-    "title": "Create new message to event chat",
-    "name": "Create_messate",
-    "group": "Event",
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access",
-        "description": "<p>Access only for authentication users</p>"
-      }
-    ],
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": ":event_id",
-            "description": "<p>Id of event</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Message content</p>"
-          }
-        ]
-      }
-    },
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "fields": {
-        "201": [
-          {
-            "group": "201",
-            "type": "array[]",
-            "optional": false,
-            "field": "messages",
-            "description": "<p>Array of all message in chat.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Object[]",
-            "optional": false,
-            "field": "messages.message",
-            "description": "<p>Message data</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "messages.message.id",
-            "description": "<p>Message id</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "messages.message.event_id",
-            "description": "<p>Chat from event of id</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "messages.message.user_id",
-            "description": "<p>User id for messaging</p>"
-          },
-          {
-            "group": "201",
-            "type": "bool",
-            "optional": false,
-            "field": "messages.message.admin_send",
-            "description": "<p>Message is from admin</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "messages.message.content",
-            "description": "<p>Messages content</p>"
-          },
-          {
-            "group": "201",
-            "type": "bool",
-            "optional": false,
-            "field": "messages.message.is_read",
-            "description": "<p>Messages status of reading</p>"
-          },
-          {
-            "group": "201",
-            "type": "Date",
-            "optional": false,
-            "field": "messages.message.created_at",
-            "description": "<p>Message updated date</p>"
-          },
-          {
-            "group": "201",
-            "type": "Date",
-            "optional": false,
-            "field": "messages.message.updated_at",
-            "description": "<p>Message created date</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "HTTP/1.1 201 OK\n [\n     {\n         \"id\":1,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":0,         //This message send user\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:06:52\",\n         \"updated_at\":\"2018-05-15 13:06:52\"\n     },\n     {\n         \"id\":2,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":1,         //This message send admin\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:07:14\",\n         \"updated_at\":\"2018-05-15 13:07:14\"\n     }\n ]",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "400": [
-          {
-            "group": "400",
-            "optional": false,
-            "field": "array",
-            "description": "<p>Array validation errors</p>"
-          },
-          {
-            "group": "400",
-            "optional": false,
-            "field": "array.parameter",
-            "description": "<p>parameter(key) and value of validation error</p>"
-          }
-        ],
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "event",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Event not found",
-          "type": "json"
-        },
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 400 Bad Request\n{\n     \"message\":\n         [\n             \"The message field is required.\"\n         ]\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Event/ChatController.php",
-    "groupTitle": "Event"
-  },
-  {
     "type": "delete",
     "url": "/api/event/:id",
     "title": "Delete  event",
@@ -4840,7 +5451,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Event/EventController.php",
+    "filename": "./app/Http/Controllers/User/EventController.php",
     "groupTitle": "Event"
   },
   {
@@ -5679,6 +6290,1214 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/Event/EventController.php",
     "groupTitle": "Event"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/user/chat",
+    "title": "Get All Admins Chats",
+    "name": "Admins_Chats",
+    "group": "Event_Chat",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Number of page. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.admin_send",
+            "description": "<p>Message sender. If TRUE - is send of Admin, else it is send user</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Message content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.is_read",
+            "description": "<p>Reading status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>created data and time</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Event data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.name",
+            "description": "<p>Event name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.count",
+            "description": "<p>Count of all message from the chat</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.unread",
+            "description": "<p>Count unread message from the chat</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage (event id for chat).</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n{\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?page=1\",\n   \"current_page\":1,\n   \"from\":1,\n   \"last_page\":1,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?page=1\",\n   \"next_page_url\":null,\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?\",\n   \"per_page\":20,\n   \"prev_page_url\":null,\n   \"to\":2,\n   \"total\":2,\n   \"data\":\n       {\n           \"6\":\n               {\n                   \"id\":7,\n                   \"event_id\":6,\n                   \"user_id\":6,\n                   \"admin_send\":0,\n                   \"content\":\"test\",\n                   \"is_read\":0,\n                   \"created_at\":\"2018-09-15 13:09:15\",\n                   \"updated_at\":\"2018-09-15 13:09:15\",\n                   \"event\":\n                       {\n                           \"id\":6,\n                           \"title\":\"testing\"\n                       },\n                   \"user\":\n                       {\n                           \"id\":6,\n                           \"name\":\"Test_user\"\n                       },\n                   \"count\":3,\n                   \"unread\":2\n               },\n           .......\n        }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event_Chat"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/:event_id/chat/user",
+    "title": "Get message of the chat from event for Admin",
+    "name": "Admins_Event_Chat",
+    "group": "Event_Chat",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Number of page. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.admin_send",
+            "description": "<p>Message sender. If TRUE - is send of Admin, else it is send user</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Message content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.is_read",
+            "description": "<p>Reading status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>created data and time</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Event data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.name",
+            "description": "<p>Event name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n{\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?page=1\",\n   \"current_page\":1,\n   \"from\":1,\n   \"last_page\":1,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?page=1\",\n   \"next_page_url\":null,\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":5,\n   \"total\":5,\n   \"data\":\n       {\n           \"2\":\n               {\n                   \"id\":4,\n                   \"event_id\":7,\n                   \"user_id\":6,\n                   \"admin_send\":0,\n                   \"content\":\"123546\",\n                   \"is_read\":1,\n                   \"created_at\":\"2018-05-16 13:17:25\",\n                   \"updated_at\":\"2018-05-16 13:17:25\",\n                   \"event\":\n                       {\n                           \"id\":7,\n                           \"title\":\"testing\"\n                       },\n                   \"user\":\n                       {\n                           \"id\":6,\n                           \"name\":\"Test_user\"\n                       }\n               },\n               ........\n       }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event_Chat"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/chat/create",
+    "title": "Create new message to event chat",
+    "name": "Create_message",
+    "group": "Event_Chat",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message content</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "array[]",
+            "optional": false,
+            "field": "messages",
+            "description": "<p>Array of all message in chat.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Object[]",
+            "optional": false,
+            "field": "messages.message",
+            "description": "<p>Message data</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.event_id",
+            "description": "<p>Chat from event of id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "messages.message.user_id",
+            "description": "<p>User id for messaging</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "messages.message.admin_send",
+            "description": "<p>Message is from admin</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "messages.message.content",
+            "description": "<p>Messages content</p>"
+          },
+          {
+            "group": "201",
+            "type": "bool",
+            "optional": false,
+            "field": "messages.message.is_read",
+            "description": "<p>Messages status of reading</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "messages.message.created_at",
+            "description": "<p>Message updated date</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "messages.message.updated_at",
+            "description": "<p>Message created date</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK\n [\n     {\n         \"id\":1,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":0,         //This message send user\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:06:52\",\n         \"updated_at\":\"2018-05-15 13:06:52\"\n     },\n     {\n         \"id\":2,\n         \"event_id\":1,\n         \"user_id\":1,\n         \"admin_send\":1,         //This message send admin\n         \"content\":\"test\",\n         \"is_read\":0,\n         \"created_at\":\"2018-05-15 13:07:14\",\n         \"updated_at\":\"2018-05-15 13:07:14\"\n     }\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"message\":\n         [\n             \"The message field is required.\"\n         ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event_Chat"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/user/chat",
+    "title": "Get All Users Chats",
+    "name": "Users_Chats",
+    "group": "Event_Chat",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Number of page. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.admin_send",
+            "description": "<p>Message sender. If TRUE - is send of Admin, else it is send user</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Message content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.is_read",
+            "description": "<p>Reading status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>created data and time</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Event data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.name",
+            "description": "<p>Event name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.count",
+            "description": "<p>Count of all message from the chat</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.unread",
+            "description": "<p>Count unread message from the chat</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage (event id for chat).</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n{\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?page=1\",\n   \"current_page\":1,\n   \"from\":1,\n   \"last_page\":1,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?page=1\",\n   \"next_page_url\":null,\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/user\\/chat?\",\n   \"per_page\":20,\n   \"prev_page_url\":null,\n   \"to\":2,\n   \"total\":2,\n   \"data\":\n       {\n           \"6\":\n               {\n                   \"id\":7,\n                   \"event_id\":6,\n                   \"user_id\":6,\n                   \"admin_send\":0,\n                   \"content\":\"test\",\n                   \"is_read\":0,\n                   \"created_at\":\"2018-09-15 13:09:15\",\n                   \"updated_at\":\"2018-09-15 13:09:15\",\n                   \"event\":\n                       {\n                           \"id\":6,\n                           \"title\":\"testing\"\n                       },\n                   \"user\":\n                       {\n                           \"id\":6,\n                           \"name\":\"Test_user\"\n                       },\n                   \"count\":3,\n                   \"unread\":2\n               },\n           .......\n        }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event_Chat"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/chat/user",
+    "title": "Get message of the chat from event",
+    "name": "Users_Event_Chat",
+    "group": "Event_Chat",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Number of page. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>Message id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user_id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.admin_send",
+            "description": "<p>Message sender. If TRUE - is send of Admin, else it is send user</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.content",
+            "description": "<p>Message content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "data.array.is_read",
+            "description": "<p>Reading status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.array.created_at",
+            "description": "<p>created data and time</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event",
+            "description": "<p>Event data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.name",
+            "description": "<p>Event name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.user",
+            "description": "<p>User data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.user.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.user.name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n{\n   \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?page=1\",\n   \"current_page\":1,\n   \"from\":1,\n   \"last_page\":1,\n   \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?page=1\",\n   \"next_page_url\":null,\n   \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/7\\/chat\\/user?\",\n   \"per_page\":10,\n   \"prev_page_url\":null,\n   \"to\":5,\n   \"total\":5,\n   \"data\":\n       {\n           \"2\":\n               {\n                   \"id\":4,\n                   \"event_id\":7,\n                   \"user_id\":6,\n                   \"admin_send\":0,\n                   \"content\":\"123546\",\n                   \"is_read\":1,\n                   \"created_at\":\"2018-05-16 13:17:25\",\n                   \"updated_at\":\"2018-05-16 13:17:25\",\n                   \"event\":\n                       {\n                           \"id\":7,\n                           \"title\":\"testing\"\n                       },\n                   \"user\":\n                       {\n                           \"id\":6,\n                           \"name\":\"Test_user\"\n                       }\n               },\n               ........\n       }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/ChatController.php",
+    "groupTitle": "Event_Chat"
   },
   {
     "type": "put",
@@ -8287,27 +10106,6 @@ define({ "api": [
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.user",
-            "description": "<p>Event Author data</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.user.id",
-            "description": "<p>Author user id</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.user.name",
-            "description": "<p>Author name</p>"
-          },
-          {
-            "group": "200",
-            "type": "Array[]",
-            "optional": false,
             "field": "data.array.event.images",
             "description": "<p>Array Event preview</p>"
           },
@@ -8688,6 +10486,69 @@ define({ "api": [
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
             "description": "<p>Array Event demand data demand type supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
           }
         ],
         "201": [
@@ -8711,76 +10572,13 @@ define({ "api": [
             "optional": false,
             "field": "data.array",
             "description": "<p>Data array of event.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "first_page_url",
-            "description": "<p>Url of the first page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "last_page_url",
-            "description": "<p>Url of the last page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "next_page_url",
-            "description": "<p>Url of the next page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "path",
-            "description": "<p>Base URL of request.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "from",
-            "description": "<p>Number of start element.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "to",
-            "description": "<p>Number of end element.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "total",
-            "description": "<p>Count of all elements.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "per_page",
-            "description": "<p>Elements on page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "last_page",
-            "description": "<p>Number of the last page.</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 201 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -9378,8 +11176,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -9389,8 +11187,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
@@ -9454,8 +11252,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -9465,8 +11263,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
