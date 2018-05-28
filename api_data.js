@@ -11317,7 +11317,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"event_views_count\":0,\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -12373,8 +12373,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -12384,8 +12384,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
@@ -12449,8 +12449,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -12460,8 +12460,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
@@ -13559,5 +13559,1196 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/GeodataController.php",
     "groupTitle": "GeoData"
+  },
+  {
+    "type": "post",
+    "url": "/api/post/:id",
+    "title": "Create new Post",
+    "name": "Create_Post",
+    "group": "Post",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Data array.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[\n     {\n         \"title\":\"Post Title\",\n         \"content\":\"Post Content\",\n         \"user_id\":1,\n         \"id\":1\",\n     },\n.....\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "post",
+    "url": "/api/post/create",
+    "title": "Create new Post",
+    "name": "Create_Post",
+    "group": "Post",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.required|string|min:3|max:255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.required|string|min:3|max:1500</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "_token",
+            "description": "<p>X-CSRF-TOKEN</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "videos",
+            "description": "<p>Array of array video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "videos.array",
+            "description": "<p>Array of video data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "videos.array.url",
+            "description": "<p>URL of video</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "videos.array.title",
+            "description": "<p>Title of video</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images",
+            "description": "<p>Array of array image data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "images.array",
+            "description": "<p>Array of image data</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "optional": false,
+            "field": "images.array.file",
+            "description": "<p>File of image</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "images.array.title",
+            "description": "<p>Title of image</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Bool",
+            "optional": false,
+            "field": "images.array.is_preview",
+            "description": "<p>This image is preview of event</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"title\":\"Post Title\",\n     \"content\":\"Post Content\",\n     \"videos\":\n         [\n             1 :\n                 [\n                     'title' : 'Same title',\n                     'url' : 'Same URL'\n                 ]\n             2 :\n                 [\n                     'title' : 'Same title',\n                     'url' : 'Same URL'\n                 ]\n             ........\n         ]\n     \"images\":\n         [\n             1 :\n                 [\n                     'title' : 'Same title',\n                     'file' : 'file content'\n                     \"is_preview\": 0\n                 ]\n             2 :\n                 [\n                     'title' : 'Same title',\n                     'file' : 'file content'\n                     \"is_preview\": 1\n                 ]\n             ........\n         ]\n     \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    \"title\":\"Post Title\",\n    \"content\":\"Post Content\",\n    \"user_id\":1,\n    \"id\":1\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "put",
+    "url": "/api/post/:id",
+    "title": "Create new Post",
+    "name": "Create_Post",
+    "group": "Post",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Post id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.string|min:3|max:255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.string|min:3|max:1500</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"title\":\"Post Title\",\n     \"content\":\"Post Content\",\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    \"title\":\"Post Title\",\n    \"content\":\"Post Content\",\n    \"user_id\":1,\n    \"id\":1\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Post Not Found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n Access is denied. The time for changing the post ended",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "delete",
+    "url": "/api/post/:id",
+    "title": "Create new Post",
+    "name": "Create_Post",
+    "group": "Post",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "205": [
+          {
+            "group": "205",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Delete status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 205\n[\n    'status'=>true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Post Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "get",
+    "url": "/api/post/:id",
+    "title": "Create new Post",
+    "name": "Create_Post",
+    "group": "Post",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"title\":\"Post Title\",\n    \"content\":\"Post Content\",\n    \"user_id\":1,\n    \"id\":1\",\n},",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Post Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "post",
+    "url": "/api/event/:event_id/supply/:supply_id",
+    "title": "Create new Response to Events Demand Supply",
+    "name": "Create_Response_Supply",
+    "group": "Response_Supply",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_id",
+            "description": "<p>Supply id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Count to response position. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"count\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ],
+        "422": [
+          {
+            "group": "422",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Unprocessable Entity</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event or Supplies demand not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 422 Unprocessable Entity\n The user has already responded to this event",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 422 Unprocessable Entity\n The required number is already dialed",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/SupplyController.php",
+    "groupTitle": "Response_Supply"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/supply/:supply_id/:supply_response_id/received",
+    "title": "Creator received parcel",
+    "name": "Creator_received_parcel",
+    "group": "Response_Supply",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_id",
+            "description": "<p>Supply id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_response_id",
+            "description": "<p>Supply response id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event or Supplies demand not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/SupplyController.php",
+    "groupTitle": "Response_Supply"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/supply/:supply_id/:supply_response_id/send",
+    "title": "User send parcel",
+    "name": "User_send_parcel",
+    "group": "Response_Supply",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_id",
+            "description": "<p>Supply id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_response_id",
+            "description": "<p>Supply response id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event or Supplies demand not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/SupplyController.php",
+    "groupTitle": "Response_Supply"
+  },
+  {
+    "type": "post",
+    "url": "/api/event/:event_id/volunteer/:volunteer_id",
+    "title": "Create new Response to Events Demand Volunteer",
+    "name": "Create_Response_Volunteer",
+    "group": "Response_Volunteer",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":volunteer_id",
+            "description": "<p>Volunteer id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Count to response position. Default 1</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"count\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ],
+        "422": [
+          {
+            "group": "422",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Unprocessable Entity</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event or Volunteers demand not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 422 Unprocessable Entity\n The user has already responded to this event",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 422 Unprocessable Entity\n The required number is already dialed",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/VolunteerController.php",
+    "groupTitle": "Response_Volunteer"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/volunteer/volunteer_id/:volunteer_response_id_response_id",
+    "title": "Creator approve volunteer response",
+    "name": "Creator_approve_volunteer",
+    "group": "Response_Volunteer",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":supply_id",
+            "description": "<p>Volunteer id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":volunteer_response_id_response_id",
+            "description": "<p>Volunteer response id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\nEvent or Volunteers demand not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/VolunteerController.php",
+    "groupTitle": "Response_Volunteer"
   }
 ] });
