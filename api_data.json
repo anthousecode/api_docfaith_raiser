@@ -13562,84 +13562,6 @@
   },
   {
     "type": "post",
-    "url": "/api/post/:id",
-    "title": "Create new Post",
-    "name": "Create_Post",
-    "group": "Post",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "Array[]",
-            "optional": false,
-            "field": "array",
-            "description": "<p>Data array.</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "array.title",
-            "description": "<p>Post title.</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "array.content",
-            "description": "<p>Post content.</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "array.user_id",
-            "description": "<p>Author user id</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "array.id",
-            "description": "<p>Post id</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n[\n     {\n         \"title\":\"Post Title\",\n         \"content\":\"Post Content\",\n         \"user_id\":1,\n         \"id\":1\",\n     },\n.....\n]",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Post/UserController.php",
-    "groupTitle": "Post"
-  },
-  {
-    "type": "post",
     "url": "/api/post/create",
     "title": "Create new Post",
     "name": "Create_Post",
@@ -13839,10 +13761,273 @@
     "groupTitle": "Post"
   },
   {
+    "type": "delete",
+    "url": "/api/post/:id",
+    "title": "Delete Post",
+    "name": "Delete_Post",
+    "group": "Post",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "205": [
+          {
+            "group": "205",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Delete status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 205\n[\n    'status'=>true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Post Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "get",
+    "url": "/api/post/:id",
+    "title": "Get Post from ID",
+    "name": "Get_Post",
+    "group": "Post",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"title\":\"Post Title\",\n    \"content\":\"Post Content\",\n    \"user_id\":1,\n    \"id\":1\",\n},",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Post Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
+    "type": "post",
+    "url": "/api/post/:id",
+    "title": "Get all active Posts",
+    "name": "Get_Posts",
+    "group": "Post",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Data array.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.title",
+            "description": "<p>Post title.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.content",
+            "description": "<p>Post content.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.user_id",
+            "description": "<p>Author user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Post id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[\n     {\n         \"title\":\"Post Title\",\n         \"content\":\"Post Content\",\n         \"user_id\":1,\n         \"id\":1\",\n     },\n.....\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Post/UserController.php",
+    "groupTitle": "Post"
+  },
+  {
     "type": "put",
     "url": "/api/post/:id",
-    "title": "Create new Post",
-    "name": "Create_Post",
+    "title": "Update Post",
+    "name": "Update_Post",
     "group": "Post",
     "permission": [
       {
@@ -13993,191 +14178,6 @@
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 403 Forbidden\n Access is denied. The time for changing the post ended",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Post/UserController.php",
-    "groupTitle": "Post"
-  },
-  {
-    "type": "delete",
-    "url": "/api/post/:id",
-    "title": "Create new Post",
-    "name": "Create_Post",
-    "group": "Post",
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access",
-        "description": "<p>Access only for authentication users</p>"
-      }
-    ],
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": ":id",
-            "description": "<p>Post id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "205": [
-          {
-            "group": "205",
-            "type": "Bool",
-            "optional": false,
-            "field": "status",
-            "description": "<p>Delete status</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "   HTTP/1.1 205\n[\n    'status'=>true\n]",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "image",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Not found\n Post Not Found",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Post/UserController.php",
-    "groupTitle": "Post"
-  },
-  {
-    "type": "get",
-    "url": "/api/post/:id",
-    "title": "Create new Post",
-    "name": "Create_Post",
-    "group": "Post",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": ":id",
-            "description": "<p>Post id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>Post title.</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "content",
-            "description": "<p>Post content.</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "user_id",
-            "description": "<p>Author user id</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Post id</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"title\":\"Post Title\",\n    \"content\":\"Post Content\",\n    \"user_id\":1,\n    \"id\":1\",\n},",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "image",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Not found\n Post Not Found",
           "type": "json"
         }
       ]
