@@ -723,6 +723,27 @@
             "group": "200",
             "type": "Number",
             "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of events.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of event.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
             "field": "data.array.event.id",
             "description": "<p>Event id</p>"
           },
@@ -1236,29 +1257,6 @@
             "optional": false,
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
-          }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of events.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of event.</p>"
           }
         ]
       },
@@ -7742,6 +7740,27 @@
             "group": "200",
             "type": "Number",
             "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage (event id for chat).</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
             "field": "data.array.id",
             "description": "<p>Message id</p>"
           },
@@ -7906,29 +7925,6 @@
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
           }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of chats.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of massage (event id for chat).</p>"
-          }
         ]
       },
       "examples": [
@@ -8006,6 +8002,27 @@
     "success": {
       "fields": {
         "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage.</p>"
+          },
           {
             "group": "200",
             "type": "Number",
@@ -8159,29 +8176,6 @@
             "optional": false,
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
-          }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of chats.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of massage.</p>"
           }
         ]
       },
@@ -8435,6 +8429,27 @@
             "group": "200",
             "type": "Number",
             "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage (event id for chat).</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
             "field": "data.array.id",
             "description": "<p>Message id</p>"
           },
@@ -8599,29 +8614,6 @@
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
           }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of chats.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of massage (event id for chat).</p>"
-          }
         ]
       },
       "examples": [
@@ -8699,6 +8691,27 @@
     "success": {
       "fields": {
         "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of chats.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of massage.</p>"
+          },
           {
             "group": "200",
             "type": "Number",
@@ -8852,29 +8865,6 @@
             "optional": false,
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
-          }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of chats.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of massage.</p>"
           }
         ]
       },
@@ -11448,6 +11438,27 @@
             "group": "200",
             "type": "Number",
             "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of events.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Data array of event.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
             "field": "data.array.event.id",
             "description": "<p>Event id</p>"
           },
@@ -11940,29 +11951,6 @@
             "optional": false,
             "field": "last_page",
             "description": "<p>Number of the last page.</p>"
-          }
-        ],
-        "201": [
-          {
-            "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "current_page",
-            "description": "<p>Number of the page.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Page data of events.</p>"
-          },
-          {
-            "group": "201",
-            "type": "Array[]",
-            "optional": false,
-            "field": "data.array",
-            "description": "<p>Data array of event.</p>"
           }
         ]
       },
