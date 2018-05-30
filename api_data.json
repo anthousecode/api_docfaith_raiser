@@ -1197,28 +1197,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -1351,28 +1351,28 @@
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -1737,28 +1737,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -7877,28 +7877,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -8129,28 +8129,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -8566,28 +8566,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -8818,28 +8818,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -9189,28 +9189,28 @@
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -10538,28 +10538,28 @@
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "201",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -11248,28 +11248,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -11904,28 +11904,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -12152,28 +12152,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -12327,28 +12327,28 @@
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "first_page_url",
             "description": "<p>Url of the first page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "last_page_url",
             "description": "<p>Url of the last page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "next_page_url",
             "description": "<p>Url of the next page.</p>"
           },
           {
             "group": "200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "path",
             "description": "<p>Base URL of request.</p>"
@@ -15774,6 +15774,434 @@
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not found\n Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/UserManagementController.php",
+    "groupTitle": "User_Management"
+  },
+  {
+    "type": "post",
+    "url": "/api/admin/user/Get",
+    "title": "All Users",
+    "name": "Get_All_Users",
+    "group": "User_Management",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Page data of FAQs.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array",
+            "description": "<p>Array data of Users.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.email",
+            "description": "<p>User email</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.phone",
+            "description": "<p>User phone</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.is_admin",
+            "description": "<p>User admin status</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.newsletter",
+            "description": "<p>User newsletter status</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.blocked",
+            "description": "<p>User blocked status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":10,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n    \"data\":\n            [\n                 {\n                     \"id\":1,\n                     \"name\":\"Test1\",\n                     \"email\":\"test@test.tt\",\n                     \"phone\":\"1231234567\",\n                     \"is_admin\":0,\n                     \"newsletter\":1,\n                     \"blocked\":0,\n                 },\n                 ......\n            ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/UserManagementController.php",
+    "groupTitle": "User_Management"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/user/:id",
+    "title": "Get All Users",
+    "name": "Get_All_Users",
+    "group": "User_Management",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Id of user</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>User name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>User email</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>User phone</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "is_admin",
+            "description": "<p>User admin status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "newsletter",
+            "description": "<p>User newsletter status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "religion_id",
+            "description": "<p>User religion id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "country_id",
+            "description": "<p>User country id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "state_id",
+            "description": "<p>User state id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "city_id",
+            "description": "<p>User city id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "blocked",
+            "description": "<p>User blocked status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "event_count",
+            "description": "<p>Users event count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "event_comment_count",
+            "description": "<p>Users event comment count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "country",
+            "description": "<p>Country array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "country.sortname",
+            "description": "<p>Country sortname</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "country.name",
+            "description": "<p>Country name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "state",
+            "description": "<p>State array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "state.name",
+            "description": "<p>State name</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "city",
+            "description": "<p>City array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "city.name",
+            "description": "<p>City name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "city.lon",
+            "description": "<p>City lat</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "city.lat",
+            "description": "<p>City lat</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "image",
+            "description": "<p>image array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "image.url",
+            "description": "<p>image url</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "religion",
+            "description": "<p>religion array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "religion.title",
+            "description": "<p>religion title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n  [\n    {\n        \"id\":1,\n        \"name\":\"Test User\",\n        \"email\":\"test@testing.tt\",\n        \"phone\":\"380991234567\",\n        \"is_admin\":0,\n        \"newsletter\":1,\n        \"religion_id\":13,\n        \"country_id\":5,\n        \"state_id\":6,\n        \"city_id\":7,\n        \"image_id\":2,\n        \"created_at\":\"2018-05-18 08:18:54\",\n        \"updated_at\":\"2018-05-18 08:18:54\",\n        \"blocked\":0,\n        \"event_count\":3,\n        \"event_comment_count\":0,\n        \"country\":\n            {\n                \"sortname\":\"AD\",\n                \"name\":\"Andorra\",\n            },\n        \"state\":\n            {\n                \"name\":\"Chandigarh\",\n            },\n        \"city\":\n            {\n                \"name\":\"Adoni\",\n                \"lon\":\"77.2728368\",\n                \"lat\":\"15.6322227\"\n            },\n        \"image\":\n            {\n                \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n            },\n        \"religion\":\n            {\n                \"title\":\"Hinduism\",\n            }\n    },\n    ...........\n]",
           "type": "json"
         }
       ]
