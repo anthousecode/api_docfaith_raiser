@@ -15784,8 +15784,8 @@
   },
   {
     "type": "post",
-    "url": "/api/admin/user/Get",
-    "title": "All Users",
+    "url": "/api/admin/user/",
+    "title": "Get All Users",
     "name": "Get_All_Users",
     "group": "User_Management",
     "permission": [
@@ -15968,8 +15968,8 @@
   {
     "type": "get",
     "url": "/api/admin/user/:id",
-    "title": "Get All Users",
-    "name": "Get_All_Users",
+    "title": "Get Users data for admin",
+    "name": "Get_Users_data_for_admin",
     "group": "User_Management",
     "permission": [
       {
@@ -16202,6 +16202,25 @@
         {
           "title": "Success-Response:",
           "content": "   HTTP/1.1 200 OK\n  [\n    {\n        \"id\":1,\n        \"name\":\"Test User\",\n        \"email\":\"test@testing.tt\",\n        \"phone\":\"380991234567\",\n        \"is_admin\":0,\n        \"newsletter\":1,\n        \"religion_id\":13,\n        \"country_id\":5,\n        \"state_id\":6,\n        \"city_id\":7,\n        \"image_id\":2,\n        \"created_at\":\"2018-05-18 08:18:54\",\n        \"updated_at\":\"2018-05-18 08:18:54\",\n        \"blocked\":0,\n        \"event_count\":3,\n        \"event_comment_count\":0,\n        \"country\":\n            {\n                \"sortname\":\"AD\",\n                \"name\":\"Andorra\",\n            },\n        \"state\":\n            {\n                \"name\":\"Chandigarh\",\n            },\n        \"city\":\n            {\n                \"name\":\"Adoni\",\n                \"lon\":\"77.2728368\",\n                \"lat\":\"15.6322227\"\n            },\n        \"image\":\n            {\n                \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n            },\n        \"religion\":\n            {\n                \"title\":\"Hinduism\",\n            }\n    },\n    ...........\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Not Found",
           "type": "json"
         }
       ]
