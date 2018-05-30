@@ -571,7 +571,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "filename": "./app/Http/Controllers/Admin/AdminEventController.php",
     "groupTitle": "Admin_Event"
   },
   {
@@ -660,7 +660,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "filename": "./app/Http/Controllers/Admin/AdminEventController.php",
     "groupTitle": "Admin_Event"
   },
   {
@@ -1269,7 +1269,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/EventController.php",
+    "filename": "./app/Http/Controllers/Admin/AdminEventController.php",
     "groupTitle": "Admin_Event"
   },
   {
@@ -1584,6 +1584,116 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/api/admin/faq/:id",
+    "title": "Get FAQ from id for Admin",
+    "name": "Get_FAQ",
+    "group": "Admin_FAQ",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>FAQ id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Faq id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Faq title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Faq content</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "active",
+            "description": "<p>Faq active status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "faq",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/FAQController.php",
+    "groupTitle": "Admin_FAQ"
+  },
+  {
+    "type": "get",
     "url": "/api/admin/faq",
     "title": "Get FAQ for admin",
     "name": "Get_FAQ",
@@ -1736,116 +1846,6 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":10,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n    \"data\":\n            [\n                 {\n                     \"id\":1,\n                     \"title\":\"Test1\",\n                     \"content\":\"Testing content\",\n                     \"active\":0,\n                 },\n                 ......\n            ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/FAQController.php",
-    "groupTitle": "Admin_FAQ"
-  },
-  {
-    "type": "get",
-    "url": "/api/admin/faq/:id",
-    "title": "Get FAQ from id for Admin",
-    "name": "Get_FAQ",
-    "group": "Admin_FAQ",
-    "permission": [
-      {
-        "name": "Admin",
-        "title": "Admin access",
-        "description": "<p>Access only for users with admin rights</p>"
-      }
-    ],
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": ":id",
-            "description": "<p>FAQ id.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Faq id</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>Faq title</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "content",
-            "description": "<p>Faq content</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "active",
-            "description": "<p>Faq active status</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "faq",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
           "type": "json"
         }
       ]
@@ -4615,12 +4615,25 @@ define({ "api": [
             "field": "array.parameter",
             "description": "<p>parameter (key) and value of validation error</p>"
           }
+        ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Error message</p>"
+          }
         ]
       },
       "examples": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\n{\n     \"error\":\"The user is blocked\"\n }",
           "type": "json"
         }
       ]
@@ -13013,8 +13026,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:sortname",
-    "title": "Get country data from sortname",
+    "url": "/api/geo/country_id/:id",
+    "title": "Get country data from id",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -13024,8 +13037,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":sortname",
-            "description": "<p>Country sortname.</p>"
+            "field": ":id",
+            "description": "<p>Country ID.</p>"
           }
         ]
       }
@@ -13089,8 +13102,8 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/geo/country_id/:id",
-    "title": "Get country data from id",
+    "url": "/api/geo/country_id/:sortname",
+    "title": "Get country data from sortname",
     "name": "Country_data",
     "group": "GeoData",
     "parameter": {
@@ -13100,8 +13113,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":id",
-            "description": "<p>Country ID.</p>"
+            "field": ":sortname",
+            "description": "<p>Country sortname.</p>"
           }
         ]
       }
@@ -15679,5 +15692,183 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/StaticInfController.php",
     "groupTitle": "Static_Inform"
+  },
+  {
+    "type": "post",
+    "url": "/api/admin/user/:id/block",
+    "title": "Block User",
+    "name": "Block_User",
+    "group": "User_Management",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>User id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "202": [
+          {
+            "group": "202",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Delete status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 202\n[\n    'status'=>true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/UserManagementController.php",
+    "groupTitle": "User_Management"
+  },
+  {
+    "type": "post",
+    "url": "/api/admin/user/:id/unblock",
+    "title": "Unblock User",
+    "name": "Unblock_User",
+    "group": "User_Management",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>User id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "202": [
+          {
+            "group": "202",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Delete status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 202\n[\n    'status'=>true\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Not Found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/UserManagementController.php",
+    "groupTitle": "User_Management"
   }
 ] });
