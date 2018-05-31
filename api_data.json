@@ -17233,6 +17233,85 @@
   },
   {
     "type": "post",
+    "url": "/api/slide",
+    "title": "Get Slide data",
+    "name": "Slide",
+    "group": "Slide",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Events data array for slider</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.array",
+            "description": "<p>Event data for slider</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.array.id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.array.title",
+            "description": "<p>Event title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.array.short_story",
+            "description": "<p>Event short story</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.array.event_image_preview",
+            "description": "<p>Event preview data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.array.event_image_preview.image",
+            "description": "<p>Image data array</p>"
+          },
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.array.event_image_preview.image.url",
+            "description": "<p>Image url</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":4,\n        \"title\":\"testing\",\n        \"short_story\":\"short_story\",\n        \"event_image_preview\":\n            {\n                \"image\":\n                    {\n                        \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\"\n                    }\n            }\n    },\n    ......\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/SlideController.php",
+    "groupTitle": "Slide"
+  },
+  {
+    "type": "post",
     "url": "/api/statinf",
     "title": "Get all Static Inform",
     "name": "Get_All_Static_Inform",
