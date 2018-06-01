@@ -505,11 +505,25 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "event_id",
+            "field": ":event_id",
             "description": "<p>Id of Event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "percent_profit",
+            "description": "<p>Percent profit of Event many</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"percent_profit\": 10   // it is a 10%\n}",
+          "type": "json"
+        }
+      ]
     },
     "header": {
       "fields": {
@@ -553,6 +567,20 @@
     },
     "error": {
       "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
         "404": [
           {
             "group": "404",
@@ -566,6 +594,11 @@
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not Found\n     Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"city\":\n         [\n             \"The city field is required.\",\n             ......\n         ],\n     \"short_story\":\n         [\n             \"The short story field is required.\",\n             .....\n         ],\n     .....\n }",
           "type": "json"
         }
       ]
@@ -13902,6 +13935,13 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
+            "field": "profit",
+            "description": "<p>Type of profit(0- all; 1 - with profit; 2- with out profit).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
             "field": "sort",
             "description": "<p>Id of sorting parameter.</p>"
           },
@@ -13917,7 +13957,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n     \"word\":\"Many\",\n     \"type_destination\":2,\n     \"purpose\":2,\n     \"religion\":2,\n     \"country\":2,\n     \"state\":2,\n     \"city\":2,\n     \"sort\":2,\n     \"page\":2,\n}",
+          "content": "{\n     \"word\":\"Many\",\n     \"type_destination\":2,\n     \"purpose\":2,\n     \"religion\":2,\n     \"country\":2,\n     \"state\":2,\n     \"city\":2,\n     \"sort\":2,\n     \"profit\":0,\n     \"page\":2,\n}",
           "type": "json"
         }
       ]
