@@ -19519,87 +19519,11 @@ define({ "api": [
     "groupTitle": "Static_Inform"
   },
   {
-    "type": "delete",
-    "url": "/api/user/avatar",
-    "title": "Create users avatar",
-    "name": "Create_avatar",
-    "group": "User",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "fields": {
-        "201": [
-          {
-            "group": "201",
-            "type": "Bool",
-            "optional": false,
-            "field": "status",
-            "description": "<p>Status of saving (true - ok).</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "fields": {
-        "400": [
-          {
-            "group": "400",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Message of error</p>"
-          }
-        ],
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "event",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Event not found",
-          "type": "json"
-        },
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 400 Bad Request\n No file in request",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/User/UserController.php",
-    "groupTitle": "User access",
-    "groupDescription": "<p>Access only for authentication users</p>"
-  },
-  {
     "type": "post",
     "url": "/api/user/avatar",
     "title": "Create users avatar",
     "name": "Create_avatar",
-    "group": "User",
+    "group": "User_Data",
     "permission": [
       {
         "name": "User",
@@ -19701,15 +19625,96 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/User/UserController.php",
-    "groupTitle": "User access",
-    "groupDescription": "<p>Access only for authentication users</p>"
+    "groupTitle": "User_Data"
+  },
+  {
+    "type": "delete",
+    "url": "/api/user/avatar",
+    "title": "Delete users avatar",
+    "name": "Delete_avatar",
+    "group": "User_Data",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of saving (true - ok).</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message of error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n No file in request",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/User/UserController.php",
+    "groupTitle": "User_Data"
   },
   {
     "type": "get",
     "url": "/api/auth_user",
     "title": "Get Auth User",
     "name": "Get_Auth_User",
-    "group": "User",
+    "group": "User_Data",
     "header": {
       "fields": {
         "Header": [
@@ -19841,8 +19846,7 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/User/UserController.php",
-    "groupTitle": "User access",
-    "groupDescription": "<p>Access only for authentication users</p>"
+    "groupTitle": "User_Data"
   },
   {
     "type": "post",
