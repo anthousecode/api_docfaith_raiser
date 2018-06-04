@@ -14543,6 +14543,1214 @@
     "groupTitle": "Event_Search"
   },
   {
+    "type": "post",
+    "url": "/api/event/:event_id/update/",
+    "title": "Create update of Event",
+    "name": "Create_Event_Update",
+    "group": "Event_Update",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Update title. required|string|min:3|max:255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Update content. required|string|min:3|max:1500</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "demand_type_id",
+            "description": "<p>Update demand type id. If demand type for All Demand used 0 - Do not specify a parameter.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"title\":\"Some title\",\n     \"title\":\"Some content\",\n     \"demand_type_id\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Array of updates data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update",
+            "description": "<p>Update data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.title",
+            "description": "<p>Update title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.content",
+            "description": "<p>Update content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.demand_type_id",
+            "description": "<p>Update demand type id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.event_id",
+            "description": "<p>Update Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.update.created_at",
+            "description": "<p>Update date create</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update.demand_type",
+            "description": "<p>Update demand type data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.demand_type.title",
+            "description": "<p>Update demand type title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":1,\n                \"title\":\"Test 1\",\n                \"content\":\"Testing\",\n                \"demand_type_id\":2,\n                \"event_id\":4,\n                \"created_at\":null,\n                \"demand_type\":\n                    {\n                        \"title\":\"Volunteers\",\n                    }\n            },\n            ......\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/\",\n    \"per_page\":20,\n    \"prev_page_url\":null,\n    \"to\":5,\n    \"total\":5\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Error message</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\nAccess is denied",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventUpdateController.php",
+    "groupTitle": "Event_Update"
+  },
+  {
+    "type": "delete",
+    "url": "/api/event/:event_id/update/:update_id",
+    "title": "Delete update of Event",
+    "name": "Delete_Event_Update",
+    "group": "Event_Update",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":update_id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Update title. string|min:3|max:255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Update content. string|min:3|max:1500</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "demand_type_id",
+            "description": "<p>Update demand type id. If demand type for All Demand used 0 - Do not specify a parameter.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"title\":\"Some title\",\n     \"title\":\"Some content\",\n     \"demand_type_id\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "205": [
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          },
+          {
+            "group": "205",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Array of updates data</p>"
+          },
+          {
+            "group": "205",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update",
+            "description": "<p>Update data</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.title",
+            "description": "<p>Update title</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.content",
+            "description": "<p>Update content</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.demand_type_id",
+            "description": "<p>Update demand type id</p>"
+          },
+          {
+            "group": "205",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.event_id",
+            "description": "<p>Update Event id</p>"
+          },
+          {
+            "group": "205",
+            "type": "Date",
+            "optional": false,
+            "field": "data.update.created_at",
+            "description": "<p>Update date create</p>"
+          },
+          {
+            "group": "205",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update.demand_type",
+            "description": "<p>Update demand type data</p>"
+          },
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.demand_type.title",
+            "description": "<p>Update demand type title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 205 OK\n{\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":1,\n                \"title\":\"Test 1\",\n                \"content\":\"Testing\",\n                \"demand_type_id\":2,\n                \"event_id\":4,\n                \"created_at\":null,\n                \"demand_type\":\n                    {\n                        \"title\":\"Volunteers\",\n                    }\n            },\n            ......\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/\",\n    \"per_page\":20,\n    \"prev_page_url\":null,\n    \"to\":5,\n    \"total\":5\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Error message</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\nAccess is denied",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventUpdateController.php",
+    "groupTitle": "Event_Update"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/update/",
+    "title": "Get All updates of Event",
+    "name": "Get_Event_Updates",
+    "group": "Event_Update",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>Page number</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"page\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Array of updates data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update",
+            "description": "<p>Update data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.title",
+            "description": "<p>Update title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.content",
+            "description": "<p>Update content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.demand_type_id",
+            "description": "<p>Update demand type id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.event_id",
+            "description": "<p>Update Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "data.update.created_at",
+            "description": "<p>Update date create</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update.demand_type",
+            "description": "<p>Update demand type data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.demand_type.title",
+            "description": "<p>Update demand type title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":1,\n                \"title\":\"Test 1\",\n                \"content\":\"Testing\",\n                \"demand_type_id\":2,\n                \"event_id\":4,\n                \"created_at\":null,\n                \"demand_type\":\n                    {\n                        \"title\":\"Volunteers\",\n                    }\n            },\n            ......\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/\",\n    \"per_page\":20,\n    \"prev_page_url\":null,\n    \"to\":5,\n    \"total\":5\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventUpdateController.php",
+    "groupTitle": "Event_Update"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/update/:update_id",
+    "title": "Get Update",
+    "name": "Get_Update",
+    "group": "Event_Update",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":update_id",
+            "description": "<p>Update id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Update title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Update content</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand_type_id",
+            "description": "<p>Update demand type id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "event_id",
+            "description": "<p>Update Event id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "created_at",
+            "description": "<p>Update date create</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "demand_type",
+            "description": "<p>Update demand type data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "demand_type.title",
+            "description": "<p>Update demand type title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test 1\",\n    \"content\":\"Testing\",\n    \"demand_type_id\":2,\n    \"event_id\":4,\n    \"created_at\":null,\n    \"demand_type\":\n        {\n            \"title\":\"Volunteers\",\n        }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event or Update not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventUpdateController.php",
+    "groupTitle": "Event_Update"
+  },
+  {
+    "type": "put",
+    "url": "/api/event/:event_id/update/:update_id",
+    "title": "Update update of Event",
+    "name": "Update_Event_Update",
+    "group": "Event_Update",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":update_id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Update title. string|min:3|max:255</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Update content. string|min:3|max:1500</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "demand_type_id",
+            "description": "<p>Update demand type id. If demand type for All Demand used 0 - Do not specify a parameter.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"title\":\"Some title\",\n     \"title\":\"Some content\",\n     \"demand_type_id\":1,\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "current_page",
+            "description": "<p>Number of the page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "first_page_url",
+            "description": "<p>Url of the first page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "last_page_url",
+            "description": "<p>Url of the last page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "next_page_url",
+            "description": "<p>Url of the next page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>Base URL of request.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "from",
+            "description": "<p>Number of start element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "to",
+            "description": "<p>Number of end element.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>Count of all elements.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "per_page",
+            "description": "<p>Elements on page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "last_page",
+            "description": "<p>Number of the last page.</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Array of updates data</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update",
+            "description": "<p>Update data</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.id",
+            "description": "<p>Update id</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.title",
+            "description": "<p>Update title</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.content",
+            "description": "<p>Update content</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.demand_type_id",
+            "description": "<p>Update demand type id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "data.update.event_id",
+            "description": "<p>Update Event id</p>"
+          },
+          {
+            "group": "201",
+            "type": "Date",
+            "optional": false,
+            "field": "data.update.created_at",
+            "description": "<p>Update date create</p>"
+          },
+          {
+            "group": "201",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.update.demand_type",
+            "description": "<p>Update demand type data</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "data.update.demand_type.title",
+            "description": "<p>Update demand type title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 201 OK\n{\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":1,\n                \"title\":\"Test 1\",\n                \"content\":\"Testing\",\n                \"demand_type_id\":2,\n                \"event_id\":4,\n                \"created_at\":null,\n                \"demand_type\":\n                    {\n                        \"title\":\"Volunteers\",\n                    }\n            },\n            ......\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/4\\/update\\/\",\n    \"per_page\":20,\n    \"prev_page_url\":null,\n    \"to\":5,\n    \"total\":5\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ],
+        "403": [
+          {
+            "group": "403",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Error message</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 403 Forbidden\nAccess is denied",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventUpdateController.php",
+    "groupTitle": "Event_Update"
+  },
+  {
     "type": "get",
     "url": "/api/faq/:id",
     "title": "Get FAQ from id",
@@ -17841,7 +19049,7 @@
   },
   {
     "type": "put",
-    "url": "/api/event/:event_id/volunteer/volunteer_id/:volunteer_response_id_response_id",
+    "url": "/api/event/:event_id/volunteer/:volunteer_id/:volunteer_response_id_response_id",
     "title": "Creator approve volunteer response",
     "name": "Creator_approve_volunteer",
     "group": "Response_Volunteer",
@@ -17886,7 +19094,7 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":supply_id",
+            "field": ":volunteer_id",
             "description": "<p>Volunteer id</p>"
           },
           {
@@ -18599,7 +19807,7 @@
             "type": "Array[]",
             "optional": false,
             "field": "data",
-            "description": "<p>Page data of FAQs.</p>"
+            "description": "<p>Page data of Users.</p>"
           },
           {
             "group": "200",
