@@ -7590,87 +7590,26 @@
         "200": [
           {
             "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>User id.</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>User nickname</p>"
-          },
-          {
-            "group": "200",
-            "type": "Bool",
-            "optional": false,
-            "field": "newsletter",
-            "description": "<p>User receive newsletter</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "email",
-            "description": "<p>User email</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "phone",
-            "description": "<p>User phone</p>"
-          },
-          {
-            "group": "200",
-            "type": "Bool",
-            "optional": false,
-            "field": "is_admin",
-            "description": "<p>User is admin</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "religion_id",
-            "description": "<p>User religion id</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "country_id",
-            "description": "<p>User country id</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "state_id",
-            "description": "<p>User state id</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "city_id",
-            "description": "<p>User city id</p>"
-          },
-          {
-            "group": "200",
             "type": "string",
             "optional": false,
             "field": "token",
             "description": "<p>If user login data is failed? return token</p>"
+          }
+        ],
+        "201": [
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>User token.</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":5,\n    \"name\":\"Test New\",\n    \"email\":\"new_tehhdstd@test.tt\",\n    \"phone\":null,\n    \"is_admin\":0,\n    \"newsletter\":1,\n    \"religion_id\":null,\n    \"country_id\":null,\n    \"state_id\":null,\n    \"city_id\":null,\n}",
+          "content": "    HTTP/1.1 201 OK\n {\n     \"token\":\"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\",\n}",
           "type": "json"
         },
         {
