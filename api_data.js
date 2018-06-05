@@ -1,6 +1,492 @@
 define({ "api": [
   {
     "type": "get",
+    "url": "/api/admin/delivery_options/create",
+    "title": "Create new delivery options",
+    "name": "Create_Delivery_Options",
+    "group": "Admin_Delivery_Options",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Name of new Delivery Options.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"title\": 'new name'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Object[]",
+            "optional": false,
+            "field": "object.",
+            "description": ""
+          },
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "object.id",
+            "description": "<p>Delivery Options id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "object.title",
+            "description": "<p>Delivery Options title.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 Created\n{\n     \"id\":1,\n     \"title\":\"new title\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "Title",
+            "description": "<p>Title validation iv failed.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"title\":\n         [\n             \"The title field is required.\",\n         ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/DeliveryOptionsController.php",
+    "groupTitle": "Admin_Delivery_Options"
+  },
+  {
+    "type": "delete",
+    "url": "/api/admin/delivery_options/:id",
+    "title": "Delete delivery options from id",
+    "name": "Delete_Delivery_Optionss",
+    "group": "Admin_Delivery_Options",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Delivery Options unique ID.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "205": [
+          {
+            "group": "205",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of deleting. 1 - is delete.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "205 Reset Content:",
+          "content": "{\n     \"status\":1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/DeliveryOptionsController.php",
+    "groupTitle": "Admin_Delivery_Options"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/delivery_options/:id",
+    "title": "Get delivery options from id",
+    "name": "Get_Delivery_Options",
+    "group": "Admin_Delivery_Options",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Delivery Options unique ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Delivery Options id.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Delivery Options title.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n     \"id\":1,\n     \"title\":\"Name\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Not",
+            "description": "<p>found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/DeliveryOptionsController.php",
+    "groupTitle": "Admin_Delivery_Options"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/delivery_options",
+    "title": "Get all delivery options",
+    "name": "Get_Delivery_Optionss",
+    "group": "Admin_Delivery_Options",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "array[]",
+            "optional": false,
+            "field": "array.",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "array.object",
+            "description": ""
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.object.id",
+            "description": "<p>Delivery Options id.</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.object.title",
+            "description": "<p>Delivery Options title.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"id\":1,\n         \"title\":\"Money\"\n     },\n     {\n         \"id\":2,\n         \"title\":\"Volunteers\"\n     }\n     ....\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/DeliveryOptionsController.php",
+    "groupTitle": "Admin_Delivery_Options"
+  },
+  {
+    "type": "put/patch",
+    "url": "/api/admin/delivery_options/:id",
+    "title": "Update delivery options from id",
+    "name": "Update_Delivery_Optionss",
+    "group": "Admin_Delivery_Options",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>Delivery Options unique ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Name of new Delivery Options.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"title\": 'new name'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Delivery Options id.</p>"
+          },
+          {
+            "group": "201",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Delivery Options title.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n     \"id\":1,\n     \"title\":\"Name\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "Title",
+            "description": "<p>Title validation iv failed.</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "Title",
+            "description": "<p>Delivery Options not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"title\":\n         [\n             \"The title field is required.\"\n         ]\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/DeliveryOptionsController.php",
+    "groupTitle": "Admin_Delivery_Options"
+  },
+  {
+    "type": "get",
     "url": "/api/admin/saerch/demand_type/create",
     "title": "Create new demand type",
     "name": "Create_Demand_Type",
@@ -8680,535 +9166,661 @@ define({ "api": [
         "200": [
           {
             "group": "200",
-            "type": "array[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Array Event Data.</p>"
-          },
-          {
-            "group": "200",
-            "type": "array[]",
-            "optional": false,
-            "field": "data.event",
-            "description": "<p>Event Data</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.id",
+            "field": "id",
             "description": "<p>Event id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.title",
+            "field": "title",
             "description": "<p>Event title</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.story",
+            "field": "story",
             "description": "<p>Event story</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.short_story",
+            "field": "short_story",
             "description": "<p>Event short story</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.address",
+            "field": "address",
             "description": "<p>Event address</p>"
           },
           {
             "group": "200",
             "type": "Bool",
             "optional": false,
-            "field": "data.event.is_approved",
+            "field": "is_approved",
             "description": "<p>Event approved status(true - is approved)</p>"
           },
           {
             "group": "200",
             "type": "Bool",
             "optional": false,
-            "field": "data.event.is_submit",
+            "field": "is_submit",
             "description": "<p>Event submit status(true - is submit)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "send_back",
+            "description": "<p>Event is send back</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "created_at",
+            "description": "<p>Event created at</p>"
+          },
+          {
+            "group": "200",
+            "type": "Date",
+            "optional": false,
+            "field": "finish_date",
+            "description": "<p>Event finish date</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.user",
+            "field": "user",
             "description": "<p>Event Author data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.user.id",
+            "field": "user.id",
             "description": "<p>Author user id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.user.name",
+            "field": "user.name",
             "description": "<p>Author name</p>"
           },
           {
             "group": "200",
             "type": "Boot",
             "optional": false,
-            "field": "data.event.user.is_admin",
+            "field": "user.is_admin",
             "description": "<p>Author it is user-admin(true - is admin)</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.images",
+            "field": "images",
             "description": "<p>Array Event image data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.images.id",
+            "field": "images.id",
             "description": "<p>Event image id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.images.image_id",
+            "field": "images.image_id",
             "description": "<p>Event image file id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.images.is_preview",
+            "field": "images.is_preview",
             "description": "<p>Preview status of image</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.images.image",
+            "field": "images.image",
             "description": "<p>Array Event image file data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.images.image.id",
+            "field": "images.image.id",
             "description": "<p>Event image file id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.images.image.title",
+            "field": "images.image.title",
             "description": "<p>Event image file title</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.images.image.url",
+            "field": "images.image.url",
             "description": "<p>Event image file url</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.videos",
+            "field": "videos",
             "description": "<p>Array Event video data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.videos.id",
+            "field": "videos.id",
             "description": "<p>Event video id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.videos.video_id",
+            "field": "videos.video_id",
             "description": "<p>Event video file id</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.videos.video",
+            "field": "videos.video",
             "description": "<p>Array Event video file data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.videos.video.id",
+            "field": "videos.video.id",
             "description": "<p>Event video file id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.videos.video.title",
+            "field": "videos.video.title",
             "description": "<p>Event video file title</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.videos.video.url",
+            "field": "videos.video.url",
             "description": "<p>Event video file url</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.event_status",
+            "field": "event_status",
             "description": "<p>Array Event status data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.event_status.id",
+            "field": "event_status.id",
             "description": "<p>Event status id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.event_status.title",
+            "field": "event_status.title",
             "description": "<p>Event status title</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.purpose",
+            "field": "purpose",
             "description": "<p>Array Event purpose data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.purpose.id",
+            "field": "purpose.id",
             "description": "<p>Event purpose id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.purpose.title",
+            "field": "purpose.title",
             "description": "<p>Event purpose title</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.religion",
+            "field": "religion",
             "description": "<p>Array Event religion data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.religion.id",
+            "field": "religion.id",
             "description": "<p>Event religion id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.religion.title",
+            "field": "religion.title",
             "description": "<p>Event religion title</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.type_destination",
+            "field": "type_destination",
             "description": "<p>Array Event type destination data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.type_destination.id",
+            "field": "type_destination.id",
             "description": "<p>Event type destination id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.type_destination.title",
+            "field": "type_destination.title",
             "description": "<p>Event type destination title</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.country",
+            "field": "country",
             "description": "<p>Array Event country data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.country.id",
+            "field": "country.id",
             "description": "<p>Event country id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.country.name",
+            "field": "country.name",
             "description": "<p>Event country name</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.country.sortname",
+            "field": "country.sortname",
             "description": "<p>Event country sortname</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.state",
+            "field": "state",
             "description": "<p>Array Event state data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.state.id",
+            "field": "state.id",
             "description": "<p>Event state id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.state.name",
+            "field": "state.name",
             "description": "<p>Event state name</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.city",
+            "field": "city",
             "description": "<p>Array Event city data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.city.id",
+            "field": "city.id",
             "description": "<p>Event city id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.city.name",
+            "field": "city.name",
             "description": "<p>Event city name</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "city.lon",
+            "description": "<p>Event city lon</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "city.lat",
+            "description": "<p>Event city lat</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand",
+            "field": "demand",
             "description": "<p>Array Event demand data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.id",
-            "description": "<p>Event demand data id</p>"
+            "field": "demand.id",
+            "description": "<p>Demand data id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.demand_type_id",
-            "description": "<p>Event demand data demand type id</p>"
+            "field": "demand.demand_type_id",
+            "description": "<p>Demand type id</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type",
-            "description": "<p>Array Event demand data demand type data</p>"
+            "field": "demand.demand_type",
+            "description": "<p>Demand type data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.id",
+            "field": "demand.demand_type.id",
             "description": "<p>Id of demand type</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.demand_type.title",
+            "field": "demand.demand_type.title",
             "description": "<p>Name of demand type</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.money",
-            "description": "<p>Array Event demand data demand type array money data</p>"
+            "field": "demand.money",
+            "description": "<p>Demand type array money data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.money.array",
-            "description": "<p>Event demand data demand type array money data</p>"
+            "field": "demand.money.array",
+            "description": "<p>Demand type array money data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.money.array.id",
-            "description": "<p>Array Event demand data demand type money id</p>"
+            "field": "demand.money.array.id",
+            "description": "<p>Demand type money id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.money.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type money event demand id</p>"
+            "field": "demand.money.array.event_demand_id",
+            "description": "<p>Demand type money event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
+            "field": "demand.money.array.account",
+            "description": "<p>Demand type money account</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.money.array.summ",
-            "description": "<p>Array Event demand data demand type money summ</p>"
+            "field": "demand.money.array.summ",
+            "description": "<p>Demand type money summ</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
+            "field": "demand.money.array.payment_frequency_id",
+            "description": "<p>Demand type money payment frequency id</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "field": "demand.volunteers",
+            "description": "<p>Demand type array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "field": "demand.volunteers.array",
+            "description": "<p>Demand type array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "field": "demand.volunteers.array.id",
+            "description": "<p>Demand type volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "field": "demand.volunteers.array.event_demand_id",
+            "description": "<p>Demand type volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "field": "demand.volunteers.array.name",
+            "description": "<p>Demand type volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "field": "demand.volunteers.array.count",
+            "description": "<p>Demand type volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "demand.volunteers.array.special_skills",
+            "description": "<p>Demand type volunteers need special skills</p>"
+          },
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "demand.volunteers.array.description",
+            "description": "<p>Demand type volunteers description</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "field": "demand.volunteers.array.event_volunteer_response",
+            "description": "<p>Demand type volunteers responses data array</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "demand.volunteers.array.event_volunteer_response.array",
+            "description": "<p>Demand type volunteers response data array</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "field": "demand.volunteers.array.event_volunteer_response.array.id",
+            "description": "<p>Demand type volunteers response id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "field": "demand.volunteers.array.event_volunteer_response.array.event_volunteer_id",
+            "description": "<p>Id of events volunteer</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.volunteers.array.event_volunteer_response.array.user_id",
+            "description": "<p>User Id of response</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "demand.supplies",
+            "description": "<p>Demand type array supplies data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "demand.supplies.array",
+            "description": "<p>Demand type array supplies data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.id",
+            "description": "<p>Demand type supplies id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.event_demand_id",
+            "description": "<p>Demand type supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
-            "field": "data.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "field": "demand.supplies.array.name",
+            "description": "<p>Demand type supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
-            "field": "data.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "field": "demand.supplies.array.count",
+            "description": "<p>Demand type supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.delivery_options_id",
+            "description": "<p>Demand type supplies delivery options id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.description",
+            "description": "<p>Demand type supplies description</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response",
+            "description": "<p>Demand type supplies response</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response.id",
+            "description": "<p>Demand type supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response.event_supply_id",
+            "description": "<p>Demand type supplies response supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response.user_id",
+            "description": "<p>Demand type supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response.count",
+            "description": "<p>Demand type supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "demand.supplies.array.event_supply_response.parcel_status",
+            "description": "<p>Demand type supplies response parcel status</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":1,\n        \"title\":\"testing\",\n        \"story\":\"testing story\",\n        \"short_story\":\"short_story\",\n        \"address\":\"lalalala\",\n        \"is_approved\":0,\n        \"is_submit\":1,\n        \"user\":\n            {\n                \"id\":1,\n                \"name\":\"Test User\",\n                \"is_admin\":0\n            },\n        \"image\":\n            [\n                {\n                    \"id\":1,\n                    \"image_id\":1,\n                    \"image\":\n                        {\n                            \"id\":1,\n                            \"title\":\"test\",\n                            \"url\":\"storage\\/images\\/Ur4qM78zhHholK9Y5ylcxoUYlwdx29efD9bBCNG2.jpeg\"\n                        }\n                },\n                {\n                    \"id\":2,\n                    \"image_id\":2,\n                    \"image\":\n                        {\n                            \"id\":2,\n                            \"title\":\"test2\",\n                            \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\"\n                        }\n                },\n            ..........\n            ],\n        \"video\":\n            [\n                {\n                    \"id\":1,\n                    \"video_id\":13,\n                    \"video\":\n                        {\n                            \"id\":13,\n                            \"title\":\"test1\",\n                            \"url\":\"http:\\/\\/apidocjs.com\\/\"\n                        }\n                },\n                {\n                    \"id\":2,\n                    \"video_id\":14,\n                    \"video\":\n                        {\n                            \"id\":14,\n                            \"title\":\"test2\",\n                            \"url\":\"http:\\/\\/php.net\\/manual-lookup.php?pattern=sfghfdh&scope=quickref\"\n                        }\n                },\n                .......\n            ],\n        \"event_status\":\n            {\n                \"id\":12,\n                \"title\":\"Trending\"\n            },\n        \"purpose\":\n            {\n                \"id\":20,\n                \"title\":\"Human Rights\"\n            },\n        \"religion\":\n            {\n                \"id\":11,\n                \"title\":\"Christianity\"\n            },\n        \"type_destination\":\n            {\n                \"id\":10,\n                \"title\":\"Charity\"\n            },\n        \"demand\":\n            [\n                {\n                    \"id\":1,\n                    \"demand_type_id\":2,\n                    \"demand_type\":\n                        {\n                            \"id\":1,\n                            \"title\":\"Many\",\n                        },\n                    \"volunteers\":[],\n                    \"supplies\":[],\n                    \"money\":\n                        [\n                            {\n                                \"id\":2,\n                                \"event_demand_id\":1,\n                                \"account\":\"635168132101651\",\n                                \"summ\":1230000,\n                                \"payment_frequency_id\":5\n                            }\n                        ]\n                },\n                {\n                    \"id\":1,\n                    \"demand_type_id\":2,\n                    \"demand_type\":\n                        {\n                            \"id\":2,\n                            \"title\":\"Volunteers\",\n                        },\n                    \"volunteers\":\n                        [\n                            {\n                                \"id\":1,\n                                \"event_demand_id\":1,\n                                \"name\":\"test 1\",\n                                \"count\":10,\n                            },\n                            {\n                                \"id\":2,\n                                \"event_demand_id\":1,\n                                \"name\":\"test 2\",\n                                \"count\":22,\n                            },\n                        .......\n                        ],\n                    \"supplies\":[],\n                    \"money\":[]\n                },\n                {\n                    \"id\":1,\n                    \"demand_type_id\":2,\n                    \"demand_type\":\n                        {\n                            \"id\":3,\n                            \"title\":\"Supplies\",\n                        },\n                    \"volunteers\":[],\n                    \"supplies\":\n                        [\n                            {\n                                \"id\":1,\n                                \"event_demand_id\":1,\n                                \"name\":\"test 1\",\n                                \"count\":10,\n                            },\n                            {\n                                \"id\":2,\n                                \"event_demand_id\":1,\n                                \"name\":\"test 2\",\n                                \"count\":22,\n                            },\n                        .......\n                        ],\n                    \"money\":[]\n                },\n            ],\n        \"country\":\n            {\n                \"id\":1,\n                \"sortname\":\"AF\",\n                \"name\":\"Afghanistan\"\n            },\n        \"state\":\n            {\n                \"id\":1,\n                \"name\":\"Andaman and Nicobar Islands\"\n            },\n        \"city\":\n            {\n                \"id\":1,\n                \"name\":\"Bombuflat\"\n            }\n     }\n]",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":7,\n    \"title\":\"testing\",\n    \"story\":\"testing story\",\n    \"short_story\":\"short_story\",\n    \"address\":\"lalalala\",\n    \"is_approved\":1,\n    \"is_submit\":1,\n    \"created_at\":\"2018-05-21 06:55:34\",\n    \"finish_date\":null,\n    \"send_back\":0,\n    \"images\":\n        [\n            {\n                \"id\":4,\n                \"image_id\":2,\n                \"is_preview\":1,\n                \"image\":\n                    {\n                        \"id\":2,\n                        \"title\":\"test2\",\n                        \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                    },\n                    ......\n            },\n            ......\n        ],\n    \"videos\":\n        [\n            {\n                \"id\":1,\n                \"video_id\":13,\n                \"video\":\n                    {\n                        \"id\":13,\n                        \"title\":\"test1\",\n                        \"url\":\"http:\\/\\/apidocjs.com\\/\",\n                    },\n                    ......\n            },\n            ........\n        ]\n    \"user\":\n        {\n            \"id\":6,\n            \"name\":\"Test_user\",\n            \"is_admin\":0,\n        },\n    \"event_status\":\n        {\n            \"id\":6,\n            \"name\":\"trending\",\n            \"title\":\"Trending\",\n        },\n    \"purpose\":\n        {\n            \"id\":6,\n            \"title\":\"Children & Education\",\n        },\n    \"religion\":\n        {\n            \"id\":6,\n            \"title\":\"Christianity\",\n        },\n    \"type_destination\":\n        {\n            \"id\":6,\n            \"title\":\"Charity\",\n        },\n    \"country\":\n        {\n            \"id\":6,\n            \"sortname\":\"AF\",\n            \"name\":\"Afghanistan\",\n        },\n    \"state\":\n        {\n            \"id\":6,\n            \"name\":\"Andaman and Nicobar Islands\",\n        },\n    \"city\":\n        {\n            \"id\":6,\n            \"name\":\"Kondapalle\",\n            \"lon\":\"82.2719086\",\n            \"lat\":\"17.562337\"\n        },\n    \"demand\":\n        [\n            {\n                \"id\":1,\n                \"demand_type_id\":2,\n                \"demand_type\":\n                    {\n                        \"id\":2\n                        \"title\":\"Volunteers\",\n                    },\n                \"money\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"account\":\"635168132101651\",\n                            \"summ\":1230000,\n                            \"payment_frequency_id\":5\n                        }\n                    ],\n                \"volunteers\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"name\":\"test 2\",\n                            \"count\":22,\n                            \"special_skills\":0,\n                            \"description\":null,\n                            \"event_volunteer_response\":\n                                [\n                                    {\n                                        \"id\":4,\n                                        \"event_volunteer_id\":2,\n                                        \"user_id\":1,\n                                    },\n                                    ......\n                                ]\n                        },\n                        .......\n                     ],\n                \"supplies\":\n                    [\n                        {\n                            \"id\":1,\n                            \"event_demand_id\":2,\n                            \"name\":\"Test 1\",\n                            \"count\":2,\n                            \"delivery_id\":0,\n                            \"description\":null,\n                            \"event_supply_response\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_supply_id\":1,\n                                        \"user_id\":2,\n                                        \"count\":2,\n                                        \"parcel_status\":\"pending\",\n                                    },\n                                    .........\n                                ]\n                        },\n                        ........\n                    ],\n            }\n        ]\n}",
           "type": "json"
         }
       ]
@@ -19580,6 +20192,77 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/StaticInfController.php",
     "groupTitle": "Static_Inform"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/delivery_options",
+    "title": "Get all delivery options",
+    "name": "Delivery_Options",
+    "group": "Supply",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Data Delivery Options data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Delivery Options id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.title",
+            "description": "<p>Delivery Options title</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":1,\n        \"title\":\"Ship\",\n    },\n    {\n        \"id\":2,\n        \"title\":\"Drop-Off\",\n    },\n    {\n        \"id\":3,\n        \"title\":\"Pickup\",\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/SupplyController.php",
+    "groupTitle": "Supply"
   },
   {
     "type": "post",
