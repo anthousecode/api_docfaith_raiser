@@ -7838,38 +7838,17 @@ define({ "api": [
         "201": [
           {
             "group": "201",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>User id.</p>"
-          },
-          {
-            "group": "201",
             "type": "String",
             "optional": false,
-            "field": "name",
-            "description": "<p>User nickname</p>"
-          },
-          {
-            "group": "201",
-            "type": "Bool",
-            "optional": false,
-            "field": "newsletter",
-            "description": "<p>User receive newsletter</p>"
-          },
-          {
-            "group": "201",
-            "type": "String",
-            "optional": false,
-            "field": "email",
-            "description": "<p>User email</p>"
+            "field": "token",
+            "description": "<p>User token.</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 201 OK\n {\n     \"name\":\"Test New\",\n     \"email\":\"test@test.tt\",\n     \"newsletter\":\"1\",\n     \"id\":5\n}",
+          "content": "    HTTP/1.1 201 OK\n {\n     \"token\":\"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\",\n}",
           "type": "json"
         }
       ]
