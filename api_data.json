@@ -1060,84 +1060,147 @@
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "description": "<p>Array  array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "description": "<p>array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "description": "<p>volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "description": "<p>volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "description": "<p>volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "description": "<p>volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_volunteer_response_count",
+            "description": "<p>volunteers response count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "data.array.event.demand.supplies.a",
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "description": "<p>supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "description": "<p>supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "description": "<p>supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "description": "<p>supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response_sum",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.id",
+            "description": "<p>supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.event_supply_id",
+            "description": "<p>supplies response event supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.user_id",
+            "description": "<p>supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.count",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.parcel_status",
+            "description": "<p>supplies response parcel status</p>"
           },
           {
             "group": "200",
@@ -1207,7 +1270,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -21055,133 +21118,196 @@
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.money",
-            "description": "<p>Array Event demand data demand type array money data</p>"
+            "description": "<p>Array  array money data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.money.array",
-            "description": "<p>Event demand data demand type array money data</p>"
+            "description": "<p>array money data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.id",
-            "description": "<p>Array Event demand data demand type money id</p>"
+            "description": "<p>Array  money id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type money event demand id</p>"
+            "description": "<p>Array  money event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
+            "description": "<p>Array  money account</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
-            "description": "<p>Array Event demand data demand type money summ</p>"
+            "description": "<p>Array  money summ</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
+            "description": "<p>Array  money payment frequency id</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "description": "<p>Array  array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "description": "<p>array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "description": "<p>volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "description": "<p>volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "description": "<p>volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "description": "<p>volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_volunteer_response_count",
+            "description": "<p>volunteers response count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "data.array.event.demand.supplies.a",
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "description": "<p>supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "description": "<p>supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "description": "<p>supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "description": "<p>supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response_sum",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.id",
+            "description": "<p>supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.event_supply_id",
+            "description": "<p>supplies response event supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.user_id",
+            "description": "<p>supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.count",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.parcel_status",
+            "description": "<p>supplies response parcel status</p>"
           },
           {
             "group": "200",
@@ -21251,7 +21377,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -21713,84 +21839,147 @@
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "description": "<p>Array  array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "description": "<p>array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "description": "<p>volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "description": "<p>volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "description": "<p>volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "description": "<p>volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_volunteer_response_count",
+            "description": "<p>volunteers response count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "data.array.event.demand.supplies.a",
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "description": "<p>supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "description": "<p>supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "description": "<p>supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "description": "<p>supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response_sum",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.id",
+            "description": "<p>supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.event_supply_id",
+            "description": "<p>supplies response event supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.user_id",
+            "description": "<p>supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.count",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.parcel_status",
+            "description": "<p>supplies response parcel status</p>"
           },
           {
             "group": "200",
@@ -21860,7 +22049,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -22322,84 +22511,147 @@
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "description": "<p>Array  array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "description": "<p>array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "description": "<p>volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "description": "<p>volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "description": "<p>volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "description": "<p>volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_volunteer_response_count",
+            "description": "<p>volunteers response count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "data.array.event.demand.supplies.a",
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "description": "<p>supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "description": "<p>supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "description": "<p>supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "description": "<p>supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response_sum",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.id",
+            "description": "<p>supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.event_supply_id",
+            "description": "<p>supplies response event supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.user_id",
+            "description": "<p>supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.count",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.parcel_status",
+            "description": "<p>supplies response parcel status</p>"
           },
           {
             "group": "200",
@@ -22469,7 +22721,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -22931,84 +23183,147 @@
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers",
-            "description": "<p>Array Event demand data demand type array volunteers data</p>"
+            "description": "<p>Array  array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array",
-            "description": "<p>Event demand data demand type array volunteers data</p>"
+            "description": "<p>array volunteers data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.id",
-            "description": "<p>Array Event demand data demand type volunteers id</p>"
+            "description": "<p>volunteers id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type volunteers event demand id</p>"
+            "description": "<p>volunteers event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.name",
-            "description": "<p>Array Event demand data demand type volunteers name</p>"
+            "description": "<p>volunteers name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.volunteers.array.count",
-            "description": "<p>Array Event demand data demand type volunteers count</p>"
+            "description": "<p>volunteers count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.volunteers.array.event_volunteer_response_count",
+            "description": "<p>volunteers response count</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
             "field": "data.array.event.demand.supplies",
-            "description": "<p>Array Event demand data demand type array supplies data</p>"
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Array[]",
             "optional": false,
-            "field": "data.array.event.demand.supplies.array",
-            "description": "<p>Event demand data demand type array supplies data</p>"
+            "field": "data.array.event.demand.supplies.a",
+            "description": "<p>array supplies data</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.id",
-            "description": "<p>Array Event demand data demand type supplies id</p>"
+            "description": "<p>supplies id</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.event_demand_id",
-            "description": "<p>Array Event demand data demand type supplies event demand id</p>"
+            "description": "<p>supplies event demand id</p>"
           },
           {
             "group": "200",
             "type": "String",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.name",
-            "description": "<p>Array Event demand data demand type supplies name</p>"
+            "description": "<p>supplies name</p>"
           },
           {
             "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.supplies.array.count",
-            "description": "<p>Array Event demand data demand type supplies count</p>"
+            "description": "<p>supplies count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response_sum",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array",
+            "description": "<p>supplies response array data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.id",
+            "description": "<p>supplies response id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.event_supply_id",
+            "description": "<p>supplies response event supply id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.user_id",
+            "description": "<p>supplies response user id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.count",
+            "description": "<p>supplies response count</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.demand.supplies.array.event_supply_response.array.parcel_status",
+            "description": "<p>supplies response parcel status</p>"
           },
           {
             "group": "200",
@@ -23078,7 +23393,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
