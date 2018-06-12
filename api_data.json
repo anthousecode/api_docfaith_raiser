@@ -4609,6 +4609,116 @@
   },
   {
     "type": "get",
+    "url": "/api/admin/faq/:id",
+    "title": "Get FAQ from id for Admin",
+    "name": "Get_FAQ",
+    "group": "Admin_FAQ",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>FAQ id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Faq id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Faq title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Faq content</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "active",
+            "description": "<p>Faq active status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "faq",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/FAQController.php",
+    "groupTitle": "Admin_FAQ"
+  },
+  {
+    "type": "get",
     "url": "/api/admin/faq",
     "title": "Get FAQ for admin",
     "name": "Get_FAQ",
@@ -4761,116 +4871,6 @@
         {
           "title": "Success-Response:",
           "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":10,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n    \"data\":\n            [\n                 {\n                     \"id\":1,\n                     \"title\":\"Test1\",\n                     \"content\":\"Testing content\",\n                     \"active\":0,\n                 },\n                 ......\n            ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/FAQController.php",
-    "groupTitle": "Admin_FAQ"
-  },
-  {
-    "type": "get",
-    "url": "/api/admin/faq/:id",
-    "title": "Get FAQ from id for Admin",
-    "name": "Get_FAQ",
-    "group": "Admin_FAQ",
-    "permission": [
-      {
-        "name": "Admin",
-        "title": "Admin access",
-        "description": "<p>Access only for users with admin rights</p>"
-      }
-    ],
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": ":id",
-            "description": "<p>FAQ id.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Faq id</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>Faq title</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "content",
-            "description": "<p>Faq content</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "active",
-            "description": "<p>Faq active status</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "faq",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
           "type": "json"
         }
       ]
@@ -8513,6 +8513,20 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "volunteers.array.description",
+            "description": "<p>Description of volunteer.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Bool",
+            "optional": false,
+            "field": "volunteers.array.special_skills",
+            "description": "<p>Needed Special skills of volunteer.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Array[]",
             "optional": false,
             "field": "supplies",
@@ -8538,13 +8552,20 @@
             "optional": false,
             "field": "supplies.array.count",
             "description": "<p>Count of supply. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "supplies.array.description",
+            "description": "<p>Description of supply details of parcel transfer. Required</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n  \"money\":\n     [\n         1 :\n             [\n                 'summ' : 10000,\n                 'payment_frequency' : 2\n                 'account' : '12345678932174'\n             ]\n     ],\n   \"volunteers\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15\n             ]\n         ........\n     ],\n   \"supplies\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "content": "{\n  \"money\":\n     [\n         1 :\n             [\n                 'summ' : 10000,\n                 'payment_frequency' : 2\n                 'account' : '12345678932174'\n             ]\n     ],\n   \"volunteers\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'special_skills' : 0\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'special_skills' : 1\n                 'description' : \"Same description\"\n             ]\n         ........\n     ],\n   \"supplies\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'description' : \"Same description\"\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
           "type": "json"
         }
       ]
@@ -10664,6 +10685,20 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "volunteers.add.array.description",
+            "description": "<p>Description of volunteer.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Bool",
+            "optional": false,
+            "field": "volunteers.add.array.special_skills",
+            "description": "<p>Needed Special skills of volunteer.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Array[]",
             "optional": false,
             "field": "volunteers.update.array",
@@ -10689,6 +10724,20 @@
             "optional": false,
             "field": "volunteers.update.array.id",
             "description": "<p>Id of volunteer. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "volunteers.update.array.description",
+            "description": "<p>Description of volunteer.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Bool",
+            "optional": false,
+            "field": "volunteers.update.array.special_skills",
+            "description": "<p>Needed Special skills of volunteer.</p>"
           },
           {
             "group": "Parameter",
@@ -10727,6 +10776,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "supplies.add.array.description",
+            "description": "<p>Description of supply details of parcel transfer. Required</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Array[]",
             "optional": false,
             "field": "supplies.update.array",
@@ -10752,13 +10808,20 @@
             "optional": false,
             "field": "supplies.update.array.id",
             "description": "<p>Id of supply. Required</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "supplies.update.array.description",
+            "description": "<p>Description of supply details of parcel transfer. Required</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n  \"money\":\n     [\n         \"remove\":\n             [\n                 1\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'summ' : 10000,\n                         'payment_frequency' : 2\n                         'account' : '12345678932174'\n                     ]\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'summ' : 10000,\n                         'payment_frequency' : 2\n                     ]\n     ],\n \"volunteers\":\n     [\n         \"remove\":\n             [\n                 1,\n                 2,\n                 .....\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'name' : 'Same name',\n                         'count' : 10\n                     ]\n                 2 :\n                     [\n                         name' : 'Same name',\n                         'count' : 15\n                     ]\n                 ........\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'name' : 'Same name',\n                         'count' : 10\n                     ]\n                 2 :\n                     [\n                         'id' : 2,\n                         'name' : 'Same name',\n                         'count' : 15\n                     ]\n                 ........\n             ]\n     ],\n \"supplies\":\n     [\n         \"remove\":\n             [\n                 1,\n                 2,\n                 .....\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'name' : 'Same name',\n                         'count' : 10\n                     ]\n                 2 :\n                     [\n                         name' : 'Same name',\n                         'count' : 15\n                     ]\n                 ........\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'name' : 'Same name',\n                         'count' : 10\n                     ]\n                 2 :\n                     [\n                         'id' : 2,\n                         'name' : 'Same name',\n                         'count' : 15\n                     ]\n                 ........\n             ]\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "content": "{\n  \"money\":\n     [\n         \"remove\":\n             [\n                 1\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'summ' : 10000,\n                         'payment_frequency' : 2\n                         'account' : '12345678932174'\n                     ]\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'summ' : 10000,\n                         'payment_frequency' : 2\n                     ]\n     ],\n \"volunteers\":\n     [\n         \"remove\":\n             [\n                 1,\n                 2,\n                 .....\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'name' : 'Same name',\n                         'count' : 10,\n                         'special_skills' : 1\n                         'description' : \"Same description\"\n                     ]\n                 2 :\n                     [\n                         'name' : 'Same name',\n                         'count' : 15,\n                         'special_skills' : 1\n                         'description' : \"Same description\"\n                     ]\n                 ........\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'name' : 'Same name',\n                         'count' : 10\n                     ]\n                 2 :\n                     [\n                         'id' : 2,\n                         'name' : 'Same name',\n                         'count' : 15\n                     ]\n                 ........\n             ]\n     ],\n \"supplies\":\n     [\n         \"remove\":\n             [\n                 1,\n                 2,\n                 .....\n             ]\n         \"add\":\n             [\n                 1 :\n                     [\n                         'name' : 'Same name',\n                         'count' : 10,\n                         'description' : \"Same description\"\n                     ]\n                 2 :\n                     [\n                         name' : 'Same name',\n                         'count' : 15,\n                         'description' : \"Same description\"\n                     ]\n                 ........\n             ]\n         \"update\":\n             [\n                 1 :\n                     [\n                         'id' : 1,\n                         'name' : 'Same name',\n                         'count' : 10\n                         'description' : \"Same description\"\n                     ]\n                 2 :\n                     [\n                         'id' : 2,\n                         'name' : 'Same name',\n                         'count' : 15\n                         'description' : \"Same description\"\n                     ]\n                 ........\n             ]\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
           "type": "json"
         }
       ]
@@ -19309,7 +19372,7 @@
   },
   {
     "type": "post",
-    "url": "/api/event/:event_id/supply/:supply_id",
+    "url": "/api/event/:event_id/supply/response",
     "title": "Create new Response to Events Demand Supply",
     "name": "Create_Response_Supply",
     "group": "Response_Supply",
@@ -19352,9 +19415,30 @@
           },
           {
             "group": "Parameter",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Supply response data array</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Object",
+            "optional": false,
+            "field": "data.obj",
+            "description": "<p>Supply response data</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": ":supply_id",
+            "field": "data.obj.objsupply_id",
+            "description": "<p>Supply id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "data.obj.supply_id",
             "description": "<p>Supply id</p>"
           },
           {
@@ -19369,7 +19453,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n     \"count\":1,\n }",
+          "content": "data:\n   [\n       {\n           \"supply_id\":1,\n           \"count\":1,\n       },\n       .....\n   ]",
           "type": "json"
         }
       ]
@@ -19403,30 +19487,12 @@
             "field": "data",
             "description": "<p>Not found</p>"
           }
-        ],
-        "422": [
-          {
-            "group": "422",
-            "optional": false,
-            "field": "data",
-            "description": "<p>Unprocessable Entity</p>"
-          }
         ]
       },
       "examples": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not found\n Event or Supplies demand not found",
-          "type": "json"
-        },
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 422 Unprocessable Entity\n The user has already responded to this event",
-          "type": "json"
-        },
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 422 Unprocessable Entity\n The required number is already dialed",
           "type": "json"
         }
       ]
@@ -19530,6 +19596,108 @@
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 404 Not found\n Event or Supplies demand not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/SupplyController.php",
+    "groupTitle": "Response_Supply"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/supply/approve/:key",
+    "title": "User approve Response to Events Demand Supply",
+    "name": "User_approve_Response_Supply",
+    "group": "Response_Supply",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Event id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":key",
+            "description": "<p>Hash key of approve request</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of created response</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    'status' : true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Bad Request</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n [\n     'message' : 'Event Supply Responses not found'\n ]",
           "type": "json"
         }
       ]
@@ -19873,7 +20041,7 @@
     "groupTitle": "Response_Volunteer"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/api/event/:event_id/volunteer/approve/:key",
     "title": "User approve Response to Events Demand Volunteer",
     "name": "User_approve_Response_Volunteer",
