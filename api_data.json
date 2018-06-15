@@ -1522,24 +1522,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -1690,6 +1676,111 @@
           },
           {
             "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
+          },
+          {
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "first_page_url",
@@ -1756,7 +1847,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"stripe\":\n                    {\n                        \"id\":1,\n                        \"event_id\":7,\n                        \"event_money_id\":1,\n                        \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n                        \"email\":\"test@test.tt\",\n                        \"event_payment\":\n                            {\n                                \"id\":1,\n                                \"strip_event_many_data_connect_id\":1,\n                                \"amount\":1000,\n                                \"amount_result\":883,\n                                \"stripe_charge_id\":\"dghsfdghfds\",\n                                \"profit\":10,\n                                \"stripe_profit\":113,\n                            },\n                            .....\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -2194,24 +2285,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -2299,6 +2376,111 @@
           },
           {
             "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
+          },
+          {
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "first_page_url",
@@ -2365,7 +2547,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                \"stripe\":\n                    {\n                        \"id\":1,\n                        \"event_id\":7,\n                        \"event_money_id\":1,\n                        \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n                        \"email\":\"test@test.tt\",\n                        \"event_payment\":\n                            {\n                                \"id\":1,\n                                \"strip_event_many_data_connect_id\":1,\n                                \"amount\":1000,\n                                \"amount_result\":883,\n                                \"stripe_charge_id\":\"dghsfdghfds\",\n                                \"profit\":10,\n                                \"stripe_profit\":113,\n                            },\n                            .....\n                    }\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -2803,24 +2985,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -2974,7 +3142,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -3412,24 +3580,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -3583,7 +3737,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -4028,24 +4182,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -4133,6 +4273,111 @@
           },
           {
             "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
+          },
+          {
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "first_page_url",
@@ -4199,7 +4444,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"stripe\":\n                    {\n                        \"id\":1,\n                        \"event_id\":7,\n                        \"event_money_id\":1,\n                        \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n                        \"email\":\"test@test.tt\",\n                        \"event_payment\":\n                            {\n                                \"id\":1,\n                                \"strip_event_many_data_connect_id\":1,\n                                \"amount\":1000,\n                                \"amount_result\":883,\n                                \"stripe_charge_id\":\"dghsfdghfds\",\n                                \"profit\":10,\n                                \"stripe_profit\":113,\n                            },\n                            .....\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -4609,6 +4854,116 @@
   },
   {
     "type": "get",
+    "url": "/api/admin/faq/:id",
+    "title": "Get FAQ from id for Admin",
+    "name": "Get_FAQ",
+    "group": "Admin_FAQ",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>FAQ id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Faq id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Faq title</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>Faq content</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "active",
+            "description": "<p>Faq active status</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "faq",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/FAQController.php",
+    "groupTitle": "Admin_FAQ"
+  },
+  {
+    "type": "get",
     "url": "/api/admin/faq",
     "title": "Get FAQ for admin",
     "name": "Get_FAQ",
@@ -4761,116 +5116,6 @@
         {
           "title": "Success-Response:",
           "content": "   HTTP/1.1 200 OK\n{\n    \"current_page\":1,\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":10,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n    \"data\":\n            [\n                 {\n                     \"id\":1,\n                     \"title\":\"Test1\",\n                     \"content\":\"Testing content\",\n                     \"active\":0,\n                 },\n                 ......\n            ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "./app/Http/Controllers/Admin/FAQController.php",
-    "groupTitle": "Admin_FAQ"
-  },
-  {
-    "type": "get",
-    "url": "/api/admin/faq/:id",
-    "title": "Get FAQ from id for Admin",
-    "name": "Get_FAQ",
-    "group": "Admin_FAQ",
-    "permission": [
-      {
-        "name": "Admin",
-        "title": "Admin access",
-        "description": "<p>Access only for users with admin rights</p>"
-      }
-    ],
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "X-CSRF-TOKEN",
-            "description": "<p>X-CSRF-TOKEN.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Header-Example:",
-          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": ":id",
-            "description": "<p>FAQ id.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "200": [
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Faq id</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>Faq title</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "content",
-            "description": "<p>Faq content</p>"
-          },
-          {
-            "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "active",
-            "description": "<p>Faq active status</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":1,\n    \"title\":\"Test1\",\n    \"content\":\"Testing content\",\n    \"active\":0,\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "404": [
-          {
-            "group": "404",
-            "optional": false,
-            "field": "faq",
-            "description": "<p>Not found</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 404 Not found\n FAQ Not found",
           "type": "json"
         }
       ]
@@ -8467,7 +8712,7 @@
             "type": "Number",
             "optional": false,
             "field": "money.array.summ",
-            "description": "<p>Sum of needed many. Required</p>"
+            "description": "<p>Sum of needed many (in dollars). Required</p>"
           },
           {
             "group": "Parameter",
@@ -8475,13 +8720,6 @@
             "optional": false,
             "field": "money.array.payment_frequency",
             "description": "<p>Id of payment frequency. Required</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "money.array.account",
-            "description": "<p>PayPal account. Required</p>"
           },
           {
             "group": "Parameter",
@@ -8565,7 +8803,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n  \"money\":\n     [\n         1 :\n             [\n                 'summ' : 10000,\n                 'payment_frequency' : 2\n                 'account' : '12345678932174'\n             ]\n     ],\n   \"volunteers\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'special_skills' : 0\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'special_skills' : 1\n                 'description' : \"Same description\"\n             ]\n         ........\n     ],\n   \"supplies\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'description' : \"Same description\"\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "content": "{\n  \"money\":\n     [\n         1 :\n             [\n                 'summ' : 10000,\n                 'payment_frequency' : 2\n             ]\n     ],\n   \"volunteers\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'special_skills' : 0\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'special_skills' : 1\n                 'description' : \"Same description\"\n             ]\n         ........\n     ],\n   \"supplies\":\n     [\n         1 :\n             [\n                 'name' : 'Same name',\n                 'count' : 10,\n                 'description' : \"Same description\"\n             ]\n         2 :\n             [\n                 name' : 'Same name',\n                 'count' : 15,\n                 'description' : \"Same description\"\n             ]\n         ........\n     ]\n   \"_token\" : \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
           "type": "json"
         }
       ]
@@ -9580,24 +9818,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "demand.money.array.account",
-            "description": "<p>Demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "demand.money.array.summ",
             "description": "<p>Demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "demand.money.array.payment_frequency_id",
-            "description": "<p>Demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -9787,13 +10011,118 @@
             "optional": false,
             "field": "demand.supplies.array.event_supply_response.parcel_status",
             "description": "<p>Demand type supplies response parcel status</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":7,\n    \"title\":\"testing\",\n    \"story\":\"testing story\",\n    \"short_story\":\"short_story\",\n    \"address\":\"lalalala\",\n    \"is_approved\":1,\n    \"is_submit\":1,\n    \"created_at\":\"2018-05-21 06:55:34\",\n    \"finish_date\":null,\n    \"send_back\":0,\n    \"images\":\n        [\n            {\n                \"id\":4,\n                \"image_id\":2,\n                \"is_preview\":1,\n                \"image\":\n                    {\n                        \"id\":2,\n                        \"title\":\"test2\",\n                        \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                    },\n                    ......\n            },\n            ......\n        ],\n    \"videos\":\n        [\n            {\n                \"id\":1,\n                \"video_id\":13,\n                \"video\":\n                    {\n                        \"id\":13,\n                        \"title\":\"test1\",\n                        \"url\":\"http:\\/\\/apidocjs.com\\/\",\n                    },\n                    ......\n            },\n            ........\n        ]\n    \"user\":\n        {\n            \"id\":6,\n            \"name\":\"Test_user\",\n            \"is_admin\":0,\n        },\n    \"event_status\":\n        {\n            \"id\":6,\n            \"name\":\"trending\",\n            \"title\":\"Trending\",\n        },\n    \"purpose\":\n        {\n            \"id\":6,\n            \"title\":\"Children & Education\",\n        },\n    \"religion\":\n        {\n            \"id\":6,\n            \"title\":\"Christianity\",\n        },\n    \"type_destination\":\n        {\n            \"id\":6,\n            \"title\":\"Charity\",\n        },\n    \"country\":\n        {\n            \"id\":6,\n            \"sortname\":\"AF\",\n            \"name\":\"Afghanistan\",\n        },\n    \"state\":\n        {\n            \"id\":6,\n            \"name\":\"Andaman and Nicobar Islands\",\n        },\n    \"city\":\n        {\n            \"id\":6,\n            \"name\":\"Kondapalle\",\n            \"lon\":\"82.2719086\",\n            \"lat\":\"17.562337\"\n        },\n    \"demand\":\n        [\n            {\n                \"id\":1,\n                \"demand_type_id\":2,\n                \"demand_type\":\n                    {\n                        \"id\":2\n                        \"title\":\"Volunteers\",\n                    },\n                \"money\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"account\":\"635168132101651\",\n                            \"summ\":1230000,\n                            \"payment_frequency_id\":5\n                        }\n                    ],\n                \"volunteers\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"name\":\"test 2\",\n                            \"count\":22,\n                            \"special_skills\":0,\n                            \"description\":null,\n                            \"event_volunteer_response\":\n                                [\n                                    {\n                                        \"id\":4,\n                                        \"event_volunteer_id\":2,\n                                        \"user_id\":1,\n                                    },\n                                    ......\n                                ]\n                        },\n                        .......\n                     ],\n                \"supplies\":\n                    [\n                        {\n                            \"id\":1,\n                            \"event_demand_id\":2,\n                            \"name\":\"Test 1\",\n                            \"count\":2,\n                            \"delivery_id\":0,\n                            \"description\":null,\n                            \"event_supply_response\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_supply_id\":1,\n                                        \"user_id\":2,\n                                        \"count\":2,\n                                        \"parcel_status\":\"pending\",\n                                    },\n                                    .........\n                                ]\n                        },\n                        ........\n                    ],\n            }\n        ]\n}",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"id\":7,\n    \"title\":\"testing\",\n    \"story\":\"testing story\",\n    \"short_story\":\"short_story\",\n    \"address\":\"lalalala\",\n    \"is_approved\":1,\n    \"is_submit\":1,\n    \"created_at\":\"2018-05-21 06:55:34\",\n    \"finish_date\":null,\n    \"send_back\":0,\n    \"images\":\n        [\n            {\n                \"id\":4,\n                \"image_id\":2,\n                \"is_preview\":1,\n                \"image\":\n                    {\n                        \"id\":2,\n                        \"title\":\"test2\",\n                        \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                    },\n                    ......\n            },\n            ......\n        ],\n    \"videos\":\n        [\n            {\n                \"id\":1,\n                \"video_id\":13,\n                \"video\":\n                    {\n                        \"id\":13,\n                        \"title\":\"test1\",\n                        \"url\":\"http:\\/\\/apidocjs.com\\/\",\n                    },\n                    ......\n            },\n            ........\n        ]\n    \"user\":\n        {\n            \"id\":6,\n            \"name\":\"Test_user\",\n            \"is_admin\":0,\n        },\n    \"event_status\":\n        {\n            \"id\":6,\n            \"name\":\"trending\",\n            \"title\":\"Trending\",\n        },\n    \"purpose\":\n        {\n            \"id\":6,\n            \"title\":\"Children & Education\",\n        },\n    \"religion\":\n        {\n            \"id\":6,\n            \"title\":\"Christianity\",\n        },\n    \"type_destination\":\n        {\n            \"id\":6,\n            \"title\":\"Charity\",\n        },\n    \"country\":\n        {\n            \"id\":6,\n            \"sortname\":\"AF\",\n            \"name\":\"Afghanistan\",\n        },\n    \"state\":\n        {\n            \"id\":6,\n            \"name\":\"Andaman and Nicobar Islands\",\n        },\n    \"city\":\n        {\n            \"id\":6,\n            \"name\":\"Kondapalle\",\n            \"lon\":\"82.2719086\",\n            \"lat\":\"17.562337\"\n        },\n    \"stripe\":\n        {\n            \"id\":1,\n            \"event_id\":7,\n            \"event_money_id\":1,\n            \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n            \"email\":\"test@test.tt\",\n            \"event_payment\":\n                {\n                    \"id\":1,\n                    \"strip_event_many_data_connect_id\":1,\n                    \"amount\":1000,\n                    \"amount_result\":883,\n                    \"stripe_charge_id\":\"dghsfdghfds\",\n                    \"profit\":10,\n                    \"stripe_profit\":113,\n                },\n                .....\n        },\n    \"demand\":\n        [\n            {\n                \"id\":1,\n                \"demand_type_id\":2,\n                \"demand_type\":\n                    {\n                        \"id\":2\n                        \"title\":\"Volunteers\",\n                    },\n                \"money\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"summ\":1230000,\n                        }\n                    ],\n                \"volunteers\":\n                    [\n                        {\n                            \"id\":2,\n                            \"event_demand_id\":1,\n                            \"name\":\"test 2\",\n                            \"count\":22,\n                            \"special_skills\":0,\n                            \"description\":null,\n                            \"event_volunteer_response\":\n                                [\n                                    {\n                                        \"id\":4,\n                                        \"event_volunteer_id\":2,\n                                        \"user_id\":1,\n                                    },\n                                    ......\n                                ]\n                        },\n                        .......\n                     ],\n                \"supplies\":\n                    [\n                        {\n                            \"id\":1,\n                            \"event_demand_id\":2,\n                            \"name\":\"Test 1\",\n                            \"count\":2,\n                            \"delivery_id\":0,\n                            \"description\":null,\n                            \"event_supply_response\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_supply_id\":1,\n                                        \"user_id\":2,\n                                        \"count\":2,\n                                        \"parcel_status\":\"pending\",\n                                    },\n                                    .........\n                                ]\n                        },\n                        ........\n                    ],\n            }\n        ]\n}",
           "type": "json"
         }
       ]
@@ -15027,24 +15356,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -15132,6 +15447,111 @@
           },
           {
             "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
+          },
+          {
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "first_page_url",
@@ -15198,7 +15618,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"event_views_count\":0,\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"event_views_count\":0,\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                \"stripe\":\n                    {\n                        \"id\":1,\n                        \"event_id\":7,\n                        \"event_money_id\":1,\n                        \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n                        \"email\":\"test@test.tt\",\n                        \"event_payment\":\n                            {\n                                \"id\":1,\n                                \"strip_event_many_data_connect_id\":1,\n                                \"amount\":1000,\n                                \"amount_result\":883,\n                                \"stripe_charge_id\":\"dghsfdghfds\",\n                                \"profit\":10,\n                                \"stripe_profit\":113,\n                            },\n                            .....\n                    }\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -15231,6 +15651,779 @@
     "version": "0.0.0",
     "filename": "./app/Http/Controllers/Event/SearchController.php",
     "groupTitle": "Event_Search"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/payment/account",
+    "title": "Create Stripe Account for Event money",
+    "name": "Create_Stripe_Account",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of Event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "country_sortname",
+            "description": "<p>Country sortname of payment account</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Email of payment account</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pay_token",
+            "description": "<p>Payment token of payment account</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"country_sortname\":\"US\",\n  \"email\":\"test.test.tt\",\n  \"pay_token\":\"tok_1Ccvr4HXROnRwfUlJfKzTLW0\",\n\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of saving (true - ok).</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 201 OK\n {\n     \"status\":true,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ],
+        "500": [
+          {
+            "group": "500",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Same unspecified error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"supplies\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500\n     Something is wrong",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/payment/charge",
+    "title": "Create payment to event money needs",
+    "name": "Create_payment",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of Event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>Amount to be donated by the user (in dollars)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pay_token",
+            "description": "<p>Payment token of payment account</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"amount\":100,\n  \"pay_token\":\"tok_1Ccvr4HXROnRwfUlJfKzTLW0\",\n\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "201": [
+          {
+            "group": "201",
+            "type": "Bool",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of saving (true - ok).</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 201 OK\n {\n     \"status\":true,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter(key) and value of validation error</p>"
+          }
+        ],
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ],
+        "500": [
+          {
+            "group": "500",
+            "optional": false,
+            "field": "mess",
+            "description": "<p>Same unspecified error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"supplies\":\n         [\n             \"The videos field is required.\"\n         ]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500\n     Something is wrong",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/payments/all",
+    "title": "Get All Event Money Transfers",
+    "name": "Get_All_Event_Money_Transfers",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of Event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Data array of Money Transfers.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Id Money Transfers.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.strip_event_many_data_connect_id",
+            "description": "<p>Stripe content id of event Money Transfers.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.amount",
+            "description": "<p>Total amount of money transfer. (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.amount_result",
+            "description": "<p>Amount of money transfer to the account of the event.(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "array.stripe_charge_id",
+            "description": "<p>Stripe Id of Money Transfers.</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.profit",
+            "description": "<p>Money arrive at the account of the site.(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "array.stripe_profit",
+            "description": "<p>Price of services of Stripe.(in cents)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n[\n    {\n        \"id\":1,\n        \"strip_event_many_data_connect_id\":1,\n        \"amount\":1000,\n        \"amount_result\":883,\n        \"stripe_charge_id\":\"dghsfdghfds\",\n        \"profit\":10,\n        \"stripe_profit\":113,\n    },\n    .......\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/event/:event_id/payments/sum",
+    "title": "Get Profit from event for admin",
+    "name": "Get_Profit_from_event_for_admin",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of Event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "result",
+            "description": "<p>Amount of money transfer to the account of the event.(in dollars)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"result\":8.83\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/admin/event/payments/sum/period",
+    "title": "Get Profit from period for admin",
+    "name": "Get_Profit_from_period_for_admin",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "Admin",
+        "title": "Admin access",
+        "description": "<p>Access only for users with admin rights</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String/Date",
+            "optional": false,
+            "field": "start_date",
+            "description": "<p>Start Date with time in format &quot;YYYY-MM-DD HH:MM:SS&quot;. required|string</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String/Date",
+            "optional": false,
+            "field": "finish_date",
+            "description": "<p>Finish Date with time in format &quot;YYYY-MM-DD HH:MM:SS&quot;. required|string</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"start_date\": \"2018-05-21 00:00:00\"\n  \"finish_date\": \"2018-06-21 23:59:59\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "result",
+            "description": "<p>Amount of money transfer to the account of the event.(in dollars)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"result\":8.83\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "400": [
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array",
+            "description": "<p>Array validation errors</p>"
+          },
+          {
+            "group": "400",
+            "optional": false,
+            "field": "array.parameter",
+            "description": "<p>parameter (key) and value of validation error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n     \"email\":\n         [\n             \"The email has already been taken.\",\n             ........\n         ],\n       ......\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Admin/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/:event_id/payments/sum",
+    "title": "Get Sum Event Money Transfers",
+    "name": "Get_Sum_Event_Money_Transfers",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":event_id",
+            "description": "<p>Id of Event</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "result",
+            "description": "<p>Amount of money transfer to the account of the event.(in dollars)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "   HTTP/1.1 200 OK\n{\n    \"result\":8.83\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "event",
+            "description": "<p>Not found</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Event not found",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/api/event/payment/public_key",
+    "title": "Get public Stripe token(key)",
+    "name": "Get_public_Stripe_token",
+    "group": "Event_Stripe",
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access",
+        "description": "<p>Access only for authentication users</p>"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "X-CSRF-TOKEN",
+            "description": "<p>X-CSRF-TOKEN.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header-Example:",
+          "content": "{\n  \"X-CSRF-TOKEN\": \"Gnknh68NbfXCay7GZUIouJQtEO67BPgQ9QckOXCD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Bool",
+            "optional": false,
+            "field": "key",
+            "description": "<p>String with public Stripe API key(token).</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n     \"pk_test_7pZFhRePelXGwKQEpRU0aLtg\"",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Event/EventPaymentController.php",
+    "groupTitle": "Event_Stripe"
   },
   {
     "type": "post",
@@ -22337,24 +23530,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array  money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array  money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array  money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -22505,6 +23684,111 @@
           },
           {
             "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe",
+            "description": "<p>Array Event stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.id",
+            "description": "<p>Id stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_id",
+            "description": "<p>Event id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "Numeric",
+            "optional": false,
+            "field": "data.array.event.stripe.event_money_id",
+            "description": "<p>Event money id of stripe data</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.stripe_account_id",
+            "description": "<p>Stripe account id</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.email",
+            "description": "<p>Stripe account email</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment",
+            "description": "<p>Array Event stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Array[]",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array",
+            "description": "<p>Array stripe data payment</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.id",
+            "description": "<p>Payment id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.strip_event_many_data_connect_id",
+            "description": "<p>Payment stripe event money data connect id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount",
+            "description": "<p>Payment amount (in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.amount_result",
+            "description": "<p>Payment amount result(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "String",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_charge_id",
+            "description": "<p>Payment stripe charge id</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.profit",
+            "description": "<p>Site profit(in cents)</p>"
+          },
+          {
+            "group": "200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.array.event.stripe.event_payment.array.stripe_profit",
+            "description": "<p>Stripe profit(in cents)</p>"
+          },
+          {
+            "group": "200",
             "type": "String",
             "optional": false,
             "field": "first_page_url",
@@ -22571,7 +23855,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"stripe\":\n                    {\n                        \"id\":1,\n                        \"event_id\":7,\n                        \"event_money_id\":1,\n                        \"stripe_account_id\":\"acct_1CcvanEgMSxGRqza\",\n                        \"email\":\"test@test.tt\",\n                        \"event_payment\":\n                            {\n                                \"id\":1,\n                                \"strip_event_many_data_connect_id\":1,\n                                \"amount\":1000,\n                                \"amount_result\":883,\n                                \"stripe_charge_id\":\"dghsfdghfds\",\n                                \"profit\":10,\n                                \"stripe_profit\":113,\n                            },\n                            .....\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -23009,24 +24293,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -23243,7 +24513,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -23681,24 +24951,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -23915,7 +25171,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
@@ -24353,24 +25609,10 @@
           },
           {
             "group": "200",
-            "type": "String",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.account",
-            "description": "<p>Array Event demand data demand type money account</p>"
-          },
-          {
-            "group": "200",
             "type": "Number",
             "optional": false,
             "field": "data.array.event.demand.money.array.summ",
             "description": "<p>Array Event demand data demand type money summ</p>"
-          },
-          {
-            "group": "200",
-            "type": "Number",
-            "optional": false,
-            "field": "data.array.event.demand.money.array.payment_frequency_id",
-            "description": "<p>Array Event demand data demand type money payment frequency id</p>"
           },
           {
             "group": "200",
@@ -24587,7 +25829,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"account\":\"635168132101651\",\n                                        \"summ\":1230000,\n                                        \"payment_frequency_id\":5\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
+          "content": "   HTTP/1.1 200 OK\n {\n    \"current_page\":1,\n    \"data\":\n        [\n            {\n                \"id\":4,\n                \"title\":\"testing\",\n                \"story\":\"testing story\",\n                \"short_story\":\"short_story\",\n                \"address\":\"lalalala\",\n                \"type_destination_id\":10,\n                \"purpose_id\":18,\n                \"religion_id\":11,\n                \"country_id\":1,\n                \"state_id\":1,\n                \"city_id\":1,\n                \"user_id\":1,\n                \"event_status_id\":0,\n                \"is_approved\":1,\n                \"is_submit\":1,\n                \"created_at\":\"2018-05-17 11:39:00\",\n                \"updated_at\":\"2018-05-17 11:39:00\",\n                \"finish_date\":\"2018-05-17\",\n                \"comments_count\":0,\n                \"user\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Test User\"\n                    },\n                \"images\":\n                    [\n                        {\n                            \"id\":3,\n                            \"event_id\":4,\n                            \"image_id\":5,\n                            \"created_at\":null,\n                            \"updated_at\":null,\n                            \"is_preview\":1,\n                            \"image\":\n                                {\n                                    \"title\":\"test2\",\n                                    \"url\":\"storage\\/images\\/YuJPIpEwRN19wQoPctCVDVs1CkZ1mLFuHeDc7tfp.jpeg\",\n                                }\n                        }\n                    ]\n                \"event_status\":\n                    {\n                        \"id\":12,\n                        \"title\":\"Trending\"\n                    }\n                \"purpose\":\n                    {\n                        \"id\":18,\n                        \"title\":\"Children & Education\"\n                    },\n                \"religion\":\n                    {\n                        \"id\":11,\n                        \"title\":\"Christianity\"\n                    },\n                \"type_destination\":\n                    {\n                        \"id\":10,\n                        \"title\":\"Charity\"\n                    },\n                \"country\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Afghanistan\",\n                        \"sortname\":\"AF\"\n                    },\n                \"state\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Andaman and Nicobar Islands\"\n                    },\n                \"city\":\n                    {\n                        \"id\":1,\n                        \"name\":\"Bombuflat\"\n                    },\n                \"demand\":\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":1,\n                            \"demand_type\":\n                                {\n                                    \"id\":1,\n                                    \"title\":\"Many\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":[],\n                            \"money\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":1,\n                                        \"summ\":1230000,\n                                    }\n                                ]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":2,\n                            \"demand_type\":\n                                {\n                                    \"id\":2,\n                                    \"title\":\"Volunteers\",\n                                },\n                            \"volunteers\":\n                                [\n                                    {\n                                        \"id\":2,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"test 2\",\n                                        \"count\":22,\n                                        \"special_skills\":0,\n                                        \"description\":null,\n                                        \"event_volunteer_response_count\":1\n                                    },\n                                    .......\n                                ],\n                            \"supplies\":[],\n                            \"money\":[]\n                        },\n                    ],\n                    [\n                        {\n                            \"id\":1,\n                            \"demand_type_id\":3,\n                            \"demand_type\":\n                                {\n                                    \"id\":3,\n                                    \"title\":\"Supplies\",\n                                },\n                            \"volunteers\":[],\n                            \"supplies\":\n                                [\n                                    {\n                                        \"id\":1,\n                                        \"event_demand_id\":2,\n                                        \"name\":\"Test 1\",\n                                        \"count\":2,\n                                        \"delivery\":0,\n                                        \"description\":null,\n                                        \"event_supply_response_sum\":4,\n                                        \"event_supply_response\":\n                                            [\n                                                {\n                                                    \"id\":1,\n                                                    \"event_supply_id\":1,\n                                                    \"user_id\":2,\n                                                    \"count\":2,\n                                                    \"user_approved\":1,\n                                                    \"parcel_status\":\"pending\",\n                                                },\n                                                .....\n                                            ]\n                                    },\n                                    .......\n                                ],\n                            \"money\":[]\n                        },\n                    ]\n            },\n        ],\n    \"first_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"from\":1,\n    \"last_page\":1,\n    \"last_page_url\":\"http:\\/\\/charity.test\\/api\\/event\\/search?page=1\",\n    \"next_page_url\":null,\n    \"path\":\"http:\\/\\/charity.test\\/api\\/event\\/search\",\n    \"per_page\":16,\n    \"prev_page_url\":null,\n    \"to\":4,\n    \"total\":4\n}",
           "type": "json"
         }
       ]
